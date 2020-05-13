@@ -1,0 +1,70 @@
+html {
+    background-image: url("bg.png");
+    background-repeat: repeat;
+    font: 15px Arial, sans-serif;
+    color: white;
+}
+
+body {
+    margin: 0px;
+}
+
+
+
+header {
+    float: right;
+    position: fixed;
+    border-radius: 0px 0px 5px 5px;
+    padding: 0px 0px 20px 0px;
+    margin: 0px 200px 0px 0px;
+    background-color: brown;
+    width: 300px;
+    text-align: center;
+    right: 0px;
+    }
+
+
+
+main {
+    padding: 100px;
+    width: 800px;
+    text-align: left;
+    color: black
+}
+
+.redtext{
+    color: brown;
+    font-weight: 500;
+}
+
+.facebook:hover {
+    filter: brightness(50%);
+}
+
+a:hover {
+    color: rgb(226, 226, 206);
+  }
+
+a.active {   
+    color: white;
+}
+
+.leichtgrauschrift {
+    color: #858585;
+}
+
+.button {
+    background-color: #701818; 
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    filter: brightness(50%);
+    
+}
