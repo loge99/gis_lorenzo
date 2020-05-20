@@ -68,3 +68,11 @@ a.active {
     filter: brightness(50%);
     
 }
+
+#main1 {
+    color: purple;
+}
+
+#main2 {
+    font-style: italic;
+}
