@@ -1,0 +1,235 @@
+body {
+    font-family: barlow condensed, sans-serif;
+    font-weight: normal;
+
+}
+
+.box1{
+    border: 1px solid black;
+    background-color: black;
+    height: 30px;
+}
+
+header ul {
+    float: left;
+    color: white;
+}
+
+header ul li {
+    margin-top: -10px;
+    float: left;
+    position: relative;
+    left: 50%;
+    width: 100px;
+    font-size: 14px;
+    list-style-type: none;
+
+}
+
+header div ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+header ul li a:hover{
+    color: white;
+}
+
+header ul li i {
+    color: rgba(255, 255, 255, 0.87);
+    padding-left: 5px;
+}
+header ul li i:hover {
+    padding-left: 5px;
+    color: white;
+}
+
+header div h5 {
+    margin-top: 1px;
+    color: white;
+    margin: 7px 12px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+ol {
+    float: left;
+    margin-top: 60px;
+}
+ol li {
+    float: left;
+    width: 90px;
+    position: relative;
+    left: 25%;
+    list-style-type: none;
+    font-size: 18px;
+}
+ol li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.753);
+}
+ol li a:hover {
+    color: black;
+    border-bottom: 4px solid  teal;
+}
+
+.fa-search{
+    position: absolute;
+    left: 82%;
+    top: 14%;
+    color: black;
+}
+
+.fa-user{
+    position: absolute;
+    left:85%;
+    top: 14%;
+    color: black;
+}
+
+.fa-shopping-cart {
+    position: absolute;
+    left:88%;
+    top: 14%;
+    color: black;
+    width: 25px;
+    height: -30px;
+    border-radius: 100px;
+}
+
+header h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    color: #008080;
+}
+
+.cover img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+
+.Tische {
+    margin-top: 100px;;
+    border-radius: 4px; 
+    text-align: center ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #008080;
+    width: 200px;
+    color: white;
+}
+
+.Kaufen {
+    text-decoration: none;
+    background-color: teal;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
+
+.kopf-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-item {
+    padding-bottom: 30px;
+    background: white;
+    padding: 5px;
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    border: 3px solid rgba(0, 0, 0, 0.705);
+    border-radius: 5px;
+  }
+
+  .product-image {
+      width: 100px;
+      height: 100px;
+  }
+
+  main h2 {
+    font-weight: bold;
+    color: #008080;
+  }
+  
+  main h3 {
+    color: #000000;
+  } 
+
+  main p {
+    color: #000000;
+  }
+
+  .Kategorie {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.589);
+  }
+ 
+  /*mobil*/
+  @media (max-width: 600px) {
+    #table {
+          font: 20px;
+          background-color: rebeccapurple
+      }
+    #chair {
+        font: 20px;
+        background-color: royalblue
+    }
+    .fa-user {
+        padding-right: 20px;
+    }
+
+    .fa-search {
+        padding-right: 20px;
+    }
+
+}
+
+/*tablet*/
+@media (max-width: 1024px) {
+    #table {
+        font: 21px;
+        background-color: rebeccapurple
+    }
+  #chair {
+      font: 21px;
+      background-color: royalblue
+  }
+  .fa-user {
+      padding-right: 20px;
+  }
+
+  .fa-search {
+      padding-right: 20px;
+  }
+}
