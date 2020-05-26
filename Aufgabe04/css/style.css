@@ -121,7 +121,7 @@ header h2 {
     padding: 15px;
     padding-bottom: 30px;
     margin-top: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15px;
     text-align: left;
     border: 2px dotted rgba(0, 0, 0, 0.37);
@@ -134,44 +134,24 @@ header h2 {
       height: 100px;
   }
 
-  header h2 {
-      margin-top: 20px;
-    font-weight: 800;
-    font-size:50px;
-    color: #008080;
-  }
-  
-  main h3 {
-    color: #000000;
-  } 
-
-  main p {
-    color: #000000;
-  }
-
   .Kategorie {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.589);
   }
+
+
  
   /*mobil*/
   @media (max-width: 600px) {
-    #table {
-          font: 20px;
-          background-color: rebeccapurple
-      }
-    #chair {
-        font: 20px;
-        background-color: royalblue
+    header ul {
+        margin-bottom: 20px;
     }
-    .fa-user {
-        padding-right: 20px;
+    header h2 {
+        font-size: 40px;
     }
-
-    .fa-search {
-        padding-right: 20px;
-    }
-
+    .flex-item {
+        margin-bottom: 20px;
+    }   
 }
 
 /*tablet*/
