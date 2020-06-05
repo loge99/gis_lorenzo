@@ -1,0 +1,169 @@
+body {
+    font-family: barlow condensed, sans-serif;
+    font-weight: normal;
+}
+
+header ul {
+    list-style-type: none;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+header li a {
+    color: rgba(0, 0, 0, 0.705);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header ul {
+    position: fixed;
+
+}
+
+header li {
+    padding-bottom: 10px;
+    float: right;
+    padding-right: 10px;
+
+}
+
+header ul li a:hover {
+    color: black;
+}
+
+.fa-shopping-cart {
+    position: relative;
+    color: teal;
+    width: 25px;
+}
+
+.fa-shopping-cart:hover{
+    color: rgb(1, 94, 94);
+}
+
+header h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    color: #008080;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+}
+
+#hero {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  border-radius: 100px;
+}
+
+#herodiv {
+    z-index: 999;
+    background-color: white;
+
+}
+
+
+
+main h1 {
+    margin-top: 100px;;
+    border-radius: 4px; 
+    text-align: center ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #008080;
+    width: 200px;
+    color: white;
+}
+
+.KaufenButtonClass {
+    text-decoration: none;
+    background-color: teal;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+}
+
+
+ 
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-item {
+    padding-bottom: 30px;
+    background: white;
+    padding: 15px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: left;
+    border: 2px dotted rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
+    box-shadow: 8px 8px 2px 1px rgba(0, 128, 128, 0.158);
+  }
+
+  .product-image {
+      width: 100px;
+      height: 100px;
+  }
+
+  .Kategorie {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.589);
+  }
+
+
+ 
+  /*mobil*/
+  @media (max-width: 600px) {
+    header ul {
+        margin-bottom: 20px;
+    }
+    header h2 {
+        font-size: 40px;
+    }
+    .flex-item {
+        margin-bottom: 20px;
+    }   
+}
+
+/*tablet*/
+@media (max-width: 1024px) {
+    #table {
+        font: 21px;
+        background-color: rebeccapurple
+    }
+  #chair {
+      font: 21px;
+      background-color: royalblue
+  }
+  .fa-user {
+      padding-right: 20px;
+  }
+
+  .fa-search {
+      padding-right: 20px;
+  }
+}
