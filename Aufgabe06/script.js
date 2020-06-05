@@ -3,12 +3,9 @@ function myFunction() {
     console.log("ich wurde geklickt");
 }
 document.querySelector(".test23").addEventListener("click", myFunction);
-window.addEventListener("resize", function () {
-    console.log(window.innerWidth + "x" + window.innerHeight);
-});
 window.addEventListener("load", handleLoad);
 function handleLoad(_event) {
-    console.log(_event);
+    console.log();
 }
 var Aufgabe05;
 (function (Aufgabe05) {
@@ -161,8 +158,20 @@ var Aufgabe05;
         buttonElement.setAttribute("class", "KaufenButtonClass");
         buttonElement.innerHTML = "Kaufen";
         divElement.appendChild(buttonElement);
+        function myFunction() {
+            console.log("ich wurde geklickt");
+        }
+        document.querySelector("KaufenButtonClass").addEventListener("click", myFunction);
     }
     //Den ganzen Inhalt oben in den html main Tag hinzufügen
     document.getElementById("main-stühle")?.appendChild(divinhaltstuhl);
+    let einkaufswagenzahl = document.createElement("p");
+    einkaufswagenzahl.setAttribute("id", "number");
+    einkaufswagenzahl.innerHTML = "0";
+    //divElement.appendChild(buttonElement);
+    einkaufswagenzahl.addEventListener("click", function () {
+        einkaufswagenzahl.value = parseInt(einkaufswagenzahl.value) + 1;
+        console.log("ich wurde geklickt");
+    });
 })(Aufgabe05 || (Aufgabe05 = {}));
 //# sourceMappingURL=script.js.map
