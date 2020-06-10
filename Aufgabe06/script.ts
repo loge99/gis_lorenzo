@@ -1,18 +1,7 @@
-/* function myFunction() {
-    console.log("ich wurde geklickt");
-}
-document.querySelector(".test23").addEventListener("click", myFunction);
+
+namespace Aufgabe06 {
 
 
-
-
-window.addEventListener("load", handleLoad);
-
-function handleLoad(_event: Event): void {
-    console.log();
-}
- */
-namespace Aufgabe05 {
 
 
     for (let i: number = 0; i < data.length; i++) {
@@ -39,11 +28,11 @@ namespace Aufgabe05 {
         productName.classList.add("product-name");
         productDiv.appendChild(productName);
 
-        //Desciption
-        let productDescription: HTMLSpanElement = document.createElement("span");
-        productDescription.innerText = data[i].description;
-        productDescription.classList.add("product-description");
-        productDiv.appendChild(productDescription);
+        //Description
+        let productDesc: HTMLSpanElement = document.createElement("span");
+        productDesc.innerText = data[i].description;
+        productDesc.classList.add("product-desc");
+        productDiv.appendChild(productDesc);
 
         /*   //Category
           let productCategory: HTMLSpanElement = document.createElement("span");
@@ -53,25 +42,43 @@ namespace Aufgabe05 {
 
         //Button
         let productBtn: HTMLButtonElement = document.createElement("button");
-        productBtn.innerText = ("Kaufen");
+        productBtn.innerText = "Buy";
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
+        productBtn.addEventListener("click", zaehler);
+        productBtn.setAttribute("preis" , data[i].price.toString());
 
         document.getElementById(data[i].category + "-content")?.appendChild(productDiv);
 
+
     }
     
+    let warenzahlzaehler: number = 0;
+    let anzahl: HTMLElement = document.createElement("p");
+    anzahl.setAttribute("id" , "artikelzahlzaehler");
 
-    let einkaufswagenzahl: HTMLElement = document.createElement("p");
-    einkaufswagenzahl.setAttribute("id", "number");
-    einkaufswagenzahl.innerHTML = "0";
-    //divElement.appendChild(buttonElement);
+    let preis: number = 0;
 
+    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
 
-    einkaufswagenzahl.addEventListener("click", function () {
-        einkaufswagenzahl.value = parseInt(einkaufswagenzahl.value) + 1;
-        console.log("ich wurde geklickt");
+    function zaehler(_event: Event): void {
+        warenzahlzaehler++;
+        console.log(warenzahlzaehler);
+        anzahl.innerHTML = warenzahlzaehler.toString();
 
+        preis += parseFloat((<HTMLInputElement>_event.target)?.getAttribute("preis")!);
+        console.log(preis + "€");
+        document.getElementById("add")?.appendChild(anzahl);
+    }
 
-    });
+    function hidecategorytische (_event: Event): void{
+        (<HTMLElement>document.getElementById("Tische-content")).style.display = "none";
+    }
+
+    function hidecategorystühle (_event: Event): void{
+        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
+    }
 }
+
+

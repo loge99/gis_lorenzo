@@ -10,26 +10,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorenzos
         Online Store</title>
+    <script src="data.js" defer></script>
     <script src="script.js" defer></script>
-    <script src="scriptprodukte.js" defer></script>
+
 </head>
 
 
-<body>
-    <h1 class="test23" >Lorem Ipsum
+<body >
+    <h1 class="test23">Lorem Ipsum
 
     </h1>
     <header>
 
         <div>
             <ul>
-                <li><a href="#table"> Tische </a></li>
-                <li><a href="#chair"> Stühle </a></li>
-                <li><i id="add" class="fa fa-shopping-cart"></i></li>
-                <li><div id="number" ></div></li>
-                
+                <li ><a id="hidestühle" href="#Tische"> Tische </a></li>
+                <li ><a id="hidetische" href="#Stühle"> Stühle </a></li>
+                <li><i id="add" class="fa fa-shopping-cart" id="artikelzahlzaehler"></i></li>
+            
+                <li>
+                    <div id="number"></div>
+                </li>
+
             </ul>
-        </div>  
+        </div>
         <img id="logo" src="images/Logo.png" width="50" height="50" alt="leer">
         <h2>MÖBELHERO </h2>
 
@@ -43,10 +47,10 @@
 
     <main>
         <h1 id="Tische">Tische</h1>
-        <div id="Tische-content" ></div>
-        
+        <div id="Tische-content" class="content"></div>
+
         <h1 id="Stühle">Stühle</h1>
-        <div id="Stühle-content" ></div>
+        <div id="Stühle-content" class="content"></div>
 
     </main>
 </body>

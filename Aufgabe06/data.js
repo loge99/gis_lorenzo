@@ -1,9 +1,8 @@
 "use strict";
-var Aufgabe05;
-(function (Aufgabe05) {
-    Aufgabe05.data = [
+var Aufgabe06;
+(function (Aufgabe06) {
+    Aufgabe06.data = [
         {
-            //Producte erstellen >>> "Tische" und in array schreiben
             img: "images/Tische/Tisch1.png",
             price: 100,
             name: "Tisch 1",
@@ -47,48 +46,47 @@ var Aufgabe05;
         },
         {
             //>>> "Stühle"
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 50,
             name: "Stuhl 1",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 100,
             name: "Stuhl 2",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 150,
             name: "Stuhl 3",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 200,
             name: "Stuhl 4",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 250,
             name: "Stuhl 5",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 300,
             name: "Stuhl 6",
             description: "Das ist eine description.",
             category: "Stühle"
         }
     ];
-    let myJSON = JSON.stringify(Aufgabe05.data);
-})(Aufgabe05 || (Aufgabe05 = {}));
-//# sourceMappingURL=scriptprodukte.js.map
+})(Aufgabe06 || (Aufgabe06 = {}));
+//# sourceMappingURL=data.js.map

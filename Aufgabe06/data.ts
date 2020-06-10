@@ -1,4 +1,4 @@
-namespace Aufgabe05 {
+namespace Aufgabe06 {
 
     //Erstelle Interface
     export interface Product {
@@ -11,7 +11,6 @@ namespace Aufgabe05 {
 
     export let data: Product[] = [
         {
-            //Producte erstellen >>> "Tische" und in array schreiben
             img: "images/Tische/Tisch1.png",
             price: 100,
             name: "Tisch 1",
@@ -56,43 +55,42 @@ namespace Aufgabe05 {
         {
 
             //>>> "Stühle"
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 50,
             name: "Stuhl 1",
             description: "Das ist eine description.",
             category: "Stühle"
-
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 100,
             name: "Stuhl 2",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 150,
             name: "Stuhl 3",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 200,
             name: "Stuhl 4",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 250,
             name: "Stuhl 5",
             description: "Das ist eine description.",
             category: "Stühle"
         },
         {
-            img: "images/Tische/Stuhl1.png",
+            img: "images/Stühle/Stuhl1.png",
             price: 300,
             name: "Stuhl 6",
             description: "Das ist eine description.",
@@ -101,6 +99,5 @@ namespace Aufgabe05 {
 
     ];
 
-    let myJSON: string = JSON.stringify(data);
 
 }

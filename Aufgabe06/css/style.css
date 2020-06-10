@@ -129,6 +129,10 @@ main h1 {
       height: 100px;
   }
 
+  #add {
+    color: red;
+    }
+
   .Kategorie {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.589);
