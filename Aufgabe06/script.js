@@ -59,5 +59,11 @@ var Aufgabe06;
     function hidecategorystühle(_event) {
         document.getElementById("Stühle-content").style.display = "none";
     }
+    function showcategorystühle(_event) {
+        document.getElementById("Stühle-content").style.display = "none";
+    }
+    function showcategorytische(_event) {
+        document.getElementById("Stühle-content").style.display = "none";
+    }
 })(Aufgabe06 || (Aufgabe06 = {}));
 //# sourceMappingURL=script.js.map

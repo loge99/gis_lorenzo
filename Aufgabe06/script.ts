@@ -46,16 +46,16 @@ namespace Aufgabe06 {
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
         productBtn.addEventListener("click", zaehler);
-        productBtn.setAttribute("preis" , data[i].price.toString());
+        productBtn.setAttribute("preis", data[i].price.toString());
 
         document.getElementById(data[i].category + "-content")?.appendChild(productDiv);
 
 
     }
-    
+
     let warenzahlzaehler: number = 0;
     let anzahl: HTMLElement = document.createElement("p");
-    anzahl.setAttribute("id" , "artikelzahlzaehler");
+    anzahl.setAttribute("id", "artikelzahlzaehler");
 
     let preis: number = 0;
 
@@ -72,13 +72,20 @@ namespace Aufgabe06 {
         document.getElementById("add")?.appendChild(anzahl);
     }
 
-    function hidecategorytische (_event: Event): void{
+    function hidecategorytische(_event: Event): void {
         (<HTMLElement>document.getElementById("Tische-content")).style.display = "none";
     }
 
-    function hidecategorystühle (_event: Event): void{
+    function hidecategorystühle(_event: Event): void {
         (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
     }
+
+    function showcategorystühle(_event: Event): void {
+        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
+    }
+
+    function showcategorytische(_event: Event): void {
+        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
+    }
+
 }
-
-
