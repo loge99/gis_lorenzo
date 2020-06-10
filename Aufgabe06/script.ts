@@ -60,7 +60,10 @@ namespace Aufgabe06 {
     let preis: number = 0;
 
     document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+    document.getElementById("hidetische")?.addEventListener("click", showcategorytische);
+
     document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
+    document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
 
     function zaehler(_event: Event): void {
         warenzahlzaehler++;

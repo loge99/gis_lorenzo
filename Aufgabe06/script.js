@@ -44,7 +44,9 @@ var Aufgabe06;
     anzahl.setAttribute("id", "artikelzahlzaehler");
     let preis = 0;
     document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+    document.getElementById("hidetische")?.addEventListener("click", showcategorytische);
     document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
+    document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
     function zaehler(_event) {
         warenzahlzaehler++;
         console.log(warenzahlzaehler);
