@@ -1,67 +1,76 @@
 
 namespace Aufgabe07 {
 
-    window.addEventListener("load", init);
 
-    function init(_event: Event): void {
-        buildProducts();
+    interface Product {
+        img: string;
+        price: number;
+        name: string;
+        description: string;
+        category: number;
     }
+
+
+
+
+
     async function communicate(_url: RequestInfo): Promise<void> {
-        let response: Response = await fetch(_url);
+        let response: Response;
+        let möbelJSON: string;
+
+        response = await fetch(_url);
         console.log("Response", response);
+        möbelJSON = await response.text();
+        console.log(JSON.parse(möbelJSON));
+        pageload(JSON.parse(möbelJSON));
     }
-
-    function buildProducts(): void {
-
+    communicate("daten.json");
 
 
-        for (let i: number = 0; i < data.length; i++) {
-            let productDiv: HTMLDivElement = document.createElement("div");
-            productDiv.classList.add("product");
+    function pageload(möbel: Product[]): void {
 
+        for (let index: number = 0; index < möbel.length; index++) {
 
-            //Image
-            let productImg: HTMLImageElement = document.createElement("img");
-            productImg.src = data[i].img;
-            productImg.alt = data[i].name;
-            productImg.classList.add("product-img");
-            productDiv.appendChild(productImg);
+            let newDiv: HTMLElement = document.createElement("div");
+            newDiv.id = "at" + index;
 
-            //Price
-            let productPrice: HTMLSpanElement = document.createElement("span");
-            productPrice.innerText = data[i].price.toLocaleString("de-DE", { currency: "EUR", style: "currency" });
-            productPrice.classList.add("product-price");
-            productDiv.appendChild(productPrice);
+            if (möbel[index].category == 0) {
+                document.getElementById("Stühle-content")?.appendChild(newDiv);
+                newDiv.setAttribute("class", "stuhmöbel!");
 
-            //Name
-            let productName: HTMLSpanElement = document.createElement("span");
-            productName.innerText = data[i].name;
-            productName.classList.add("product-name");
-            productDiv.appendChild(productName);
+            }
 
-            //Description
-            let productDesc: HTMLSpanElement = document.createElement("span");
-            productDesc.innerText = data[i].description;
-            productDesc.classList.add("product-desc");
-            productDiv.appendChild(productDesc);
+            if (möbel[index].category == 1) {
+                document.getElementById("Tische-content")?.appendChild(newDiv);
+                newDiv.setAttribute("class", "tischmöbel!");
 
-            /*   //Category
-              let productCategory: HTMLSpanElement = document.createElement("span");
-              productCategory.innerText = data [i].category;
-              productCategory.classList.add("product-category");
-              productDiv.appendChild(productCategory); */
+            }
 
-            //Button
-            let productBtn: HTMLButtonElement = document.createElement("button");
-            productBtn.innerText = "Buy";
-            productBtn.classList.add("product-btn");
-            productDiv.appendChild(productBtn);
-            productBtn.addEventListener("click", zaehler);
-            productBtn.setAttribute("preis", data[i].price.toString());
+            let titelNeu: HTMLElement = document.createElement("p");
+            titelNeu.innerHTML = möbel[index].name;
+            document.getElementById("at" + index)?.appendChild(titelNeu);
 
-            document.getElementById(data[i].category + "-content")?.appendChild(productDiv);
+            let imageNeu: HTMLElement = document.createElement("img");
+            imageNeu.setAttribute("src", möbel[index].img);
+            document.getElementById("at" + index)?.appendChild(imageNeu);
+
+            let descriptionNeu: HTMLElement = document.createElement("p");
+            descriptionNeu.innerHTML = möbel[index].description;
+            document.getElementById("at" + index)?.appendChild(descriptionNeu);
+
+            let priceNeu: HTMLElement = document.createElement("p");
+
+            priceNeu.innerHTML = "<hr><p>" + möbel[index].price + " €</p>";
+            document.getElementById("at" + index)?.appendChild(priceNeu);
+
+            let newButton: HTMLInputElement = document.createElement("input");
+            newButton.setAttribute("class", "in_den_einkaufswagen");
+            document.getElementById("at" + index)?.appendChild(newButton);
+            newButton.value = "In den Einkaufswagen";
+            newButton.type = "submit";
+            newButton.addEventListener("click", zaehler.bind(möbel[index]));
+            newButton.setAttribute("name", JSON.stringify(möbel[index]));
         }
-
     }
 
     let warenzahlzaehler: number = 0;

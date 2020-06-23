@@ -2,32 +2,29 @@
 <html lang="de">
 
 <head>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
+    <script src="wagen.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorenzos
-        Online Store</title>
-    <script src="data.js" defer></script>
-    <script src="script.js" defer></script>
+    <title>Warenkorb</title>
 
 </head>
 
 
-<body >
-    <h1 class="test23">Lorem Ipsum
+<body>
 
-    </h1>
     <header>
 
         <div>
             <ul>
-                <li ><a id="hidestühle" href="#Tische"> Tische </a></li>
-                <li ><a id="hidetische" href="#Stühle"> Stühle </a></li>
-                <li><i id="add" class="fa fa-shopping-cart" ></i></li>
-            
+                <li><a id="hidestühle" href="#Tische"> Tische </a></li>
+                <li><a id="hidetische" href="#Stühle"> Stühle </a></li>
+                <li><i id="add" class="fa fa-shopping-cart"></i></li>
+
                 <li>
                     <div id="number"></div>
                 </li>
@@ -41,18 +38,17 @@
         <div id="herodiv">
             <img id="hero" src="images/Möbel_Hero.jpg" alt="leer">
         </div>
-
-
     </header>
 
     <main>
-        <h1 id="Tische">Tische</h1>
-        <div id="Tische-content" class="content"></div>
+        <p>Gesamtpreis</p>
+        <div id="gesamtPreis"></div>
+        <input value="Alle Entfernen" type="submit" id="removeAll">
+        <br><br><br>
 
-        <h1 id="Stühle">Stühle</h1>
-        <div id="Stühle-content" class="content"></div>
-
+        <div id="artikelplatz"></div>
     </main>
+
 </body>
 
 </html>

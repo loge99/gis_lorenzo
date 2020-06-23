@@ -1,5 +1,7 @@
 namespace Aufgabe07 {
 
+
+
     //Erstelle Interface
     export interface Product {
         img: string;
@@ -8,6 +10,8 @@ namespace Aufgabe07 {
         description: string;
         category: string;
     }
+
+
 
     export let data: Product[] = [
         {
@@ -99,5 +103,6 @@ namespace Aufgabe07 {
 
     ];
 
-
+    let daten: string = JSON.stringify(data);
+    console.log(daten);
 }

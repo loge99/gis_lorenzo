@@ -88,5 +88,7 @@ var Aufgabe07;
             category: "Stühle"
         }
     ];
+    let daten = JSON.stringify(Aufgabe07.data);
+    console.log(daten);
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=data.js.map
