@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <script src="serverpart2.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <form action="https://gislorenzo.herokuapp.com/" method="GET">
+    <input type="text" name="vname"> Vorname<br>
+    <input type="text" name="nname">Nachname<br>
+    <input type="radio" name="männlich"> männlich
+    <input type="radio" name="weiblich"> weiblich <br>
+    <button id="Senden-HTML" type="button">Senden-HTML</button>
+    <button id="Senden-JSON" type="button">Senden-JSON</button>
+  </form>
+
+  <p id=response></p>
+
+</body>
+
+</html>
