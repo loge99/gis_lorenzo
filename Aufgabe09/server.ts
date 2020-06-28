@@ -2,7 +2,7 @@
     import * as Url from "url";
 
 
-    export namespace A08Server { //Bedeutungsloses Schlüsselwort aufgrund von "import"
+    export namespace Aufgabe09 { //Bedeutungsloses Schlüsselwort aufgrund von "import"
       console.log("Starting server"); //Bedeutungsloses Schlüsselwort aufgrund von "import"
       let port: number = Number(process.env.PORT); //Erstellung Variable für Port Nummer
       if (!port)
