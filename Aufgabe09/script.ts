@@ -31,9 +31,9 @@ namespace Aufgabe09 {
 
 
         let response: Response = await fetch(url); //Holt die url, die der server wieder zurückschickt (unter button als html in dem fall)
-        let responseText: string = await response.text(); //holt die reponse und führt funktion text aus
+        let responsetext: string = await response.text(); //holt die reponse und führt funktion text aus
         let serverantwort: HTMLElement = <HTMLElement>document.getElementById("serverantwort"); // hier anders weil ich das ganze als textdatei auf der website erzeugen will
-        serverantwort.innerHTML = responseText; 
+        serverantwort.innerHTML = responsetext; 
 
 
 

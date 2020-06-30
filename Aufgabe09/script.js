@@ -24,9 +24,9 @@ var Aufgabe09;
         url = url + "/html";
         url = url + "?" + query.toString();
         let response = await fetch(url); //Holt die url, die der server wieder zurückschickt (unter button als html in dem fall)
-        let responseText = await response.text(); //holt die reponse und führt funktion text aus
+        let responsetext = await response.text(); //holt die reponse und führt funktion text aus
         let serverantwort = document.getElementById("serverantwort"); // hier anders weil ich das ganze als textdatei auf der website erzeugen will
-        serverantwort.innerHTML = responseText;
+        serverantwort.innerHTML = responsetext;
     }
 })(Aufgabe09 || (Aufgabe09 = {}));
 //# sourceMappingURL=script.js.map
