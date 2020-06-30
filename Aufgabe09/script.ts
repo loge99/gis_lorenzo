@@ -1,5 +1,7 @@
 namespace Aufgabe09 {
 
+    document.getElementById("Senden-HTML")?.addEventListener("click", printHtml);
+    document.getElementById("Senden-JSON")?.addEventListener("click", printJson);
 
     async function printJson(_event: Event): Promise<void> { //Die antwort wird als json in dder Konsole der website ausgegeben
         //_event (Funktionsparamter) "Event" Steht für einen Typ; heißt das FUnktion nur auf Event reagiert, z.B. klickt auf button 
@@ -38,8 +40,7 @@ namespace Aufgabe09 {
     }
 
 
-    document.getElementById("Senden-JSON")?.addEventListener("click", printJson);
-    document.getElementById("Senden-HTML")?.addEventListener("click", printHtml);
+
 
 
 }
