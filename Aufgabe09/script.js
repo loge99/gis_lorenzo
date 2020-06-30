@@ -7,7 +7,7 @@ var Aufgabe09;
         //_event (Funktionsparamter) "Event" Steht für einen Typ; heißt das FUnktion nur auf Event reagiert, z.B. klickt auf button 
         let formData = new FormData(document.forms[0]); //Formular data in formData packen, man brauch formular nicht genauer benennen, es gibt nur eins
         let query = new URLSearchParams(formData); //Variable für query string vom typ URLSearchParams (da kommt formdata rein)
-        let url = "http://localhost:8100";
+        let url = "https://gislorenzo.herokuapp.com";
         url = url + "/json"; //denn es wurde json button geklickt und das besagt die aufgabenstellung
         url = url + "?" + query.toString(); // Informationen in url werden abgetrennt durch fragezeichen, hier werden sie als string an url angefügt, sind normalerweise nur metadaten
         //im query.tostring sind informationen, z.B. FormData
@@ -20,7 +20,7 @@ var Aufgabe09;
     async function printHtml(_event) {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        let url = "http://localhost:8100";
+        let url = "https://gislorenzo.herokuapp.com";
         url = url + "/html";
         url = url + "?" + query.toString();
         let response = await fetch(url); //Holt die url, die der server wieder zurückschickt (unter button als html in dem fall)
