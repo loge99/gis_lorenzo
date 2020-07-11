@@ -3,6 +3,16 @@ import * as Url from "url";  //- Aufgabe des Url Moduls ist die Aufsplittung der
 import * as Mongo from "mongodb";
 
 export namespace Aufgabe11 { //- Bedeutungsloses Schlüsselwort aufgrund von "import"
+
+
+  let orders: Mongo.Collection = mongoClient.db("Test").collection("Students");
+  orders.insert({ ...});
+
+  
+  let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
+  await mongoClient.connect();
+
+
   console.log("Starte Server"); //- Print "Starte Server" in der Console
   let port: number = Number(process.env.PORT); //- Hat die Maschine mir einen port zugeteilt? - suche nach port, variable
   if (!port)
@@ -45,5 +55,5 @@ export namespace Aufgabe11 { //- Bedeutungsloses Schlüsselwort aufgrund von "im
       _response.end(); //Antwort zu Ende, wenn vergessen wird response nicht veschickt
     }
   }
-  
+
 }

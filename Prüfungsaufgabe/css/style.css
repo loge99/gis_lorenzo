@@ -1,38 +1,50 @@
-body {
+
+ body {
     font-family: barlow condensed, sans-serif;
     font-weight: normal;
+    background-color:#faf2e3ea;
+    background-image: url(bg.png);
+    background-repeat: repeat;
 }
+
 
 header ul {
     list-style-type: none;
     font-size: 20px;
     text-decoration: none;
-    background-color: white;
+    background-color: #bf6a55;
     border-radius: 5px;
     padding-top: 10px;
 }
 
 header li a {
-    color: rgba(0, 0, 0, 0.705);
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 header ul {
     position: fixed;
-
 }
 
 header li {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     float: right;
-    padding-right: 10px;
+    padding-right: 15px;
+}
 
+header h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 header ul li a:hover {
-    color: black;
+    color: rgb(245, 245, 245);
 }
+
+
 
 .fa-shopping-cart {
     position: relative;
@@ -54,17 +66,20 @@ header h2 {
 }
 
 #logo {
-
-    width: 350px;
-    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 146px;
 }
 
 #hero {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 50px;
+    border: 10px solid rgb(255, 255, 255);
 }
 
 #herodiv {
@@ -169,3 +184,4 @@ main h1 {
       padding-right: 20px;
   }
 }
+
