@@ -56,7 +56,7 @@ namespace Aufgabe06 {
 
             //>>> "Stühle"
             img: "images/Stühle/Stuhl1.png",
-            price: 50,
+            price: 99,
             name: "Stuhl 1",
             description: "Das ist eine description.",
             category: "Stühle"
