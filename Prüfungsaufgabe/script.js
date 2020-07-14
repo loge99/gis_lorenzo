@@ -41,31 +41,34 @@ var Prüfungsaufgabe;
     }
     let warenzahlzaehler = 0;
     let anzahl = document.createElement("p");
-    anzahl.setAttribute("id", "artikelzahlzaehler");
+    //anzahl.setAttribute("id", "artikelzahlzaehler");
     let preis = 0;
-    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
-    document.getElementById("hidetische")?.addEventListener("click", showcategorytische);
-    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
-    document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
+    let pricezahl = document.createElement("p");
     function zaehler(_event) {
         warenzahlzaehler++;
         console.log(warenzahlzaehler);
         anzahl.innerHTML = warenzahlzaehler.toString();
         preis += parseFloat(_event.target?.getAttribute("preis"));
         console.log(preis + "€");
-        document.getElementById("add")?.appendChild(anzahl);
+        pricezahl.innerHTML = preis.toString();
+        document.getElementById("number")?.appendChild(anzahl);
+        document.getElementById("price")?.appendChild(pricezahl);
     }
+    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+    document.getElementById("showtische")?.addEventListener("click", showcategorytische);
+    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
+    //document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
     function hidecategorytische(_event) {
         document.getElementById("Tische-content").style.display = "none";
     }
     function hidecategorystühle(_event) {
         document.getElementById("Stühle-content").style.display = "none";
     }
-    function showcategorystühle(_event) {
-        document.getElementById("Stühle-content").style.display = "none";
-    }
+    /* function showcategorystühle(_event: Event): void {
+        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "inline-grid";
+    } */
     function showcategorytische(_event) {
-        document.getElementById("Stühle-content").style.display = "none";
+        document.getElementById("Tische-content").style.display = "flex";
     }
 })(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
 //# sourceMappingURL=script.js.map

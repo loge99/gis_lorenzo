@@ -32,9 +32,9 @@ namespace Prüfungsaufgabe {
         productPrice.classList.add("product-price");
         productDiv.appendChild(productPrice);
 
-        
 
-        
+
+
 
         /*   //Category
           let productCategory: HTMLSpanElement = document.createElement("span");
@@ -43,6 +43,8 @@ namespace Prüfungsaufgabe {
           productDiv.appendChild(productCategory); */
 
         //Button
+
+
         let productBtn: HTMLButtonElement = document.createElement("button");
         productBtn.innerText = "In die Tüte";
         productBtn.classList.add("product-btn");
@@ -57,15 +59,11 @@ namespace Prüfungsaufgabe {
 
     let warenzahlzaehler: number = 0;
     let anzahl: HTMLElement = document.createElement("p");
-    anzahl.setAttribute("id", "artikelzahlzaehler");
+    //anzahl.setAttribute("id", "artikelzahlzaehler");
 
     let preis: number = 0;
+    let pricezahl: HTMLElement = document.createElement("p");
 
-    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
-    document.getElementById("hidetische")?.addEventListener("click", showcategorytische);
-
-    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
-    document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
 
     function zaehler(_event: Event): void {
         warenzahlzaehler++;
@@ -74,8 +72,19 @@ namespace Prüfungsaufgabe {
 
         preis += parseFloat((<HTMLInputElement>_event.target)?.getAttribute("preis")!);
         console.log(preis + "€");
-        document.getElementById("add")?.appendChild(anzahl);
+        pricezahl.innerHTML = preis.toString();
+        document.getElementById("number")?.appendChild(anzahl);
+        document.getElementById("price")?.appendChild(pricezahl);
     }
+
+
+    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+    
+    document.getElementById("showtische")?.addEventListener("click", showcategorytische);
+
+    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
+    //document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
+
 
     function hidecategorytische(_event: Event): void {
         (<HTMLElement>document.getElementById("Tische-content")).style.display = "none";
@@ -85,12 +94,12 @@ namespace Prüfungsaufgabe {
         (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
     }
 
-    function showcategorystühle(_event: Event): void {
-        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
-    }
+    /* function showcategorystühle(_event: Event): void {
+        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "inline-grid";
+    } */
 
     function showcategorytische(_event: Event): void {
-        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
-    }
+        (<HTMLElement>document.getElementById("Tische-content")).style.display = "flex";
+    } 
 
 }

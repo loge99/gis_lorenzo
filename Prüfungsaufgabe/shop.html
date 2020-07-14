@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eis luigi</title>
-    
+
 </head>
 
 
@@ -20,24 +20,17 @@
 
     </h1>
     <header>
-
-        <div>
-            <ul>
-                <li><a id="hidestühle" href="#Tische"> tische </a></li>
-                <li><a id="hidetische" href="#Stühle"> stühle </a></li>
-            </ul>
-        </div>
-
+        <a href="#">Händlerlogin</a>
         <div id="shoppingc">
             <ul>
-                <li><img id="add" src="images/shoppingcart.png" alt="shoppingcart"></img></li>
-                <li><div id="number"></div></li>
+                <li><img id="add" src="images/new_shopping_cart.png" alt="shoppingcart"></img></li>
+                <li><div id="number"> menge:</div></li>
+                <li><div id="price"> preis:</div></li>
+
             </ul>
         </div>
 
-
         <img id="logo" src="images/Logo_Eis_Luigi.png" alt="logo">
-
 
         <div id="herodiv">
             <img id="hero" src="images/hero_image_eis_luigi.jpg" alt="hero_image">
@@ -50,13 +43,21 @@
     </header>
 
     <main>
-
+        <div id="schritteins" class="vl"></div>
         <p>Schritt 1</p>
+        <div class="vl"></div>
 
-        <h1 id="Tische">Wähle dein Eis</h1>
+        <h1 id="Tische">Wähle alle Eissorten</h1>
+        <a id="hidetische" href="#schrittzwei"> Fertig, nächster Schritt ></a>
         <div id="Tische-content" class="content"></div>
 
-        <h1 id="Stühle">Stühle</h1>
+        <div id="schrittzwei"class="vl"></div>
+        <p>Schritt 2</p>
+        <div class="vl"></div>
+
+        <h1 id="Stühle">Toppings</h1>
+        <a id="showtische" href="#schritteins">Zurück</a>
+        <a id="hidestühle" href="#"> Fertig, nächster Schritt ></a>
         <div id="Stühle-content" class="content"></div>
 
     </main>
