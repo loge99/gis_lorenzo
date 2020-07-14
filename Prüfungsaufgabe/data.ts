@@ -14,35 +14,35 @@ namespace Prüfungsaufgabe {
             img: "images/eiscreme/chocolate-brownie.png",
             price: 3,
             name: "Chocolate Brownie",
-            description: "Das ist eine description.",
+            description: "Brownie frisch gebacken und zerkrümelt in einem cremigen Schokoladeneis.",
             category: "Tische"
         },
         {
             img: "images/eiscreme/strawberry-velvet.png",
             price: 3,
             name: "Strawberry Velvet",
-            description: "Das ist eine description.",
+            description: "Fruchtige Erdbeeren. Ganze Stückchen und wenig Zuckerzusatz.",
             category: "Tische"
         },
         {
             img: "images/eiscreme/chocolate-chip.png",
             price: 3,
             name: "Chocolate Chip",
-            description: "Das ist eine description.",
+            description: "Die perfekte Mischung aus Cookie und Dough mit knackigen Schokostücken.",
             category: "Tische"
         },
         {
             img: "images/eiscreme/vanilla-bourbon.png",
             price: 3,
             name: "Vanilla Bourbon",
-            description: "Das ist eine description.",
+            description: "Zart im Geschmack, mit Bourbon Vanille von der Karibikinsel Guadeloupe.",
             category: "Tische"
         },
         {
             img: "images/eiscreme/mango-mousse.png",
             price: 3,
             name: "Mango Mousse",
-            description: "Das ist eine description.",
+            description: "Frische, sonnenreif geerntete Mangos zaubern ein fruchtiges Erlebnis.",
             category: "Tische"
         },
         {

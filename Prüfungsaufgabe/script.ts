@@ -44,7 +44,7 @@ namespace Prüfungsaufgabe {
 
         //Button
         let productBtn: HTMLButtonElement = document.createElement("button");
-        productBtn.innerText = "Buy";
+        productBtn.innerText = "In die Tüte";
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
         productBtn.addEventListener("click", zaehler);

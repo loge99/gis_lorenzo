@@ -1,12 +1,12 @@
-html {
-    background-image: url(bg.png);
-    background-repeat: repeat;
-}
+
 
  body {
     font-family: barlow condensed, sans-serif;
     font-weight: normal;
     background-color:#faf2e3ea;
+    background-image: url(../bg.png);
+    background-repeat: repeat;background-image: url(../bg.png);
+    background-repeat: repeat;
 
 }
 
@@ -121,18 +121,10 @@ main h1 {
 }
 
 main p {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
 }
 
-.KaufenButtonClass {
-    text-decoration: none;
-    background-color: teal;
-    border-radius: 5px;
-    color: white;
-    font-size: 20px;
-    padding: 8px;
-}
 
  
 
@@ -147,36 +139,96 @@ main p {
     padding: 0;
     margin: 0;
     list-style: none;
+    
 }
 
 main div.product {
-    padding-bottom: 30px;
     background: white;
-    padding: 15px;
+    padding: 30px;
     padding-bottom: 30px;
-    margin-top: 10px;
     color: rgb(0, 0, 0);
     font-size: 15px;
     text-align: left;
-    border: 2px dotted rgba(0, 0, 0, 0.37);
+    border: 0px;
     border-radius: 5px;
-    box-shadow: 8px 8px 2px 1px rgba(0, 128, 128, 0.158);
-    width: 300px;
+    box-shadow: 8px 8px 2px 1px rgba(90, 216, 216, 0.158);
+    width: 250px;
+    margin-right: 20px;
+    margin-bottom: 60px;
   }
 
   .product .product-img {
-      width: 250px;
-      height: 290px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 290px;
+    margin-top: -25px;
+    margin-bottom: -20px;
+
   }
 
   .product .product-name {
-      font-size: 25px;
-      font-weight: 600;
-      text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    color: rgb(75, 75, 75);
   }
 
+  .product .product-desc {
+    text-align: center;
+    display: block;
+    margin-right: 35px;
+    margin-left: 35px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(104, 104, 104);
+  }
+
+  .product .product-price {
+    text-align: center;
+    display: block;
+    float: left;
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 7px;
+
+  }
+
+  .product .product-btn { 
+    text-align: right;
+    float: right;
+    font-size: 19px;
+    border-width: 0px;
+    border-radius: 5px;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    background-color: #f2533d;
+    margin-right: 15px;
+  }
+
+  .product .product-btn:hover {
+    background-color: #d14937;
+    color: white;
+    transition-duration: 600ms;
+    opacity:1;
+}
+
+  #shoppingc {
+    float: right;
+    
+}
+
   #add {
-    color: red;
+    width: 60px;
+    vertical-align: right;
     }
 
   .Kategorie {
