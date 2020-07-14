@@ -1,4 +1,4 @@
-import * as Http from "http"; //- Laden des Modules (Erweiterung) HTTP, um einen Server zu bauen. * = sämtliche Funktionalität laden
+/*import * as Http from "http"; //- Laden des Modules (Erweiterung) HTTP, um einen Server zu bauen. * = sämtliche Funktionalität laden
 import * as Url from "url";  //- Aufgabe des Url Moduls ist die Aufsplittung der URl in lesbare Teile. Muss importiert werden zur Verwendung
 import * as Mongo from "mongodb";
 
@@ -57,3 +57,4 @@ export namespace Aufgabe11 { //- Bedeutungsloses Schlüsselwort aufgrund von "im
   }
 
 }
+*/

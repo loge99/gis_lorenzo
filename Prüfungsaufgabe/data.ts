@@ -1,50 +1,52 @@
-"use strict";
-var Aufgabe06;
-(function (Aufgabe06) {
-    Aufgabe06.data = [
+namespace Prüfungsaufgabe {
+
+    //Erstelle Interface
+    export interface Product {
+        img: string;
+        price: number;
+        name: string;
+        description: string;
+        category: string;
+    }
+
+    export let data: Product[] = [
         {
-            img: "images/Tische/Tisch1.png",
-            price: 100,
-            name: "Tisch 1",
+            img: "images/eiscreme/chocolate-brownie.png",
+            price: 3,
+            name: "Chocolate Brownie",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch2.jpg",
-            price: 200,
-            name: "Tisch 2",
+            img: "images/eiscreme/strawberry-velvet.png",
+            price: 3,
+            name: "Strawberry Velvet",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch3.jpg",
-            price: 300,
-            name: "Tisch 3",
+            img: "images/eiscreme/chocolate-chip.png",
+            price: 3,
+            name: "Chocolate Chip",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch4.jpg",
-            price: 400,
-            name: "Tisch 4",
+            img: "images/eiscreme/vanilla-bourbon.png",
+            price: 3,
+            name: "Vanilla Bourbon",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch5.png",
-            price: 500,
-            name: "Tisch 5",
+            img: "images/eiscreme/mango-mousse.png",
+            price: 3,
+            name: "Mango Mousse",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch6.jpg",
-            price: 600,
-            name: "Tisch 6",
-            description: "Das ist eine description.",
-            category: "Tische"
-        },
-        {
+
             //>>> "Stühle"
             img: "images/Stühle/Stuhl1.png",
             price: 99,
@@ -87,6 +89,8 @@ var Aufgabe06;
             description: "Das ist eine description.",
             category: "Stühle"
         }
+
     ];
-})(Aufgabe06 || (Aufgabe06 = {}));
-//# sourceMappingURL=data.js.map
+
+
+}

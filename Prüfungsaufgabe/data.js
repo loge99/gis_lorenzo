@@ -1,46 +1,39 @@
 "use strict";
-var Aufgabe06;
-(function (Aufgabe06) {
-    Aufgabe06.data = [
+var Prüfungsaufgabe;
+(function (Prüfungsaufgabe) {
+    Prüfungsaufgabe.data = [
         {
-            img: "images/Tische/Tisch1.png",
-            price: 100,
-            name: "Tisch 1",
+            img: "images/eiscreme/chocolate-brownie.png",
+            price: 3,
+            name: "Chocolate Brownie",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch2.jpg",
-            price: 200,
-            name: "Tisch 2",
+            img: "images/eiscreme/strawberry-velvet.png",
+            price: 3,
+            name: "Strawberry Velvet",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch3.jpg",
-            price: 300,
-            name: "Tisch 3",
+            img: "images/eiscreme/chocolate-chip.png",
+            price: 3,
+            name: "Chocolate Chip",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch4.jpg",
-            price: 400,
-            name: "Tisch 4",
+            img: "images/eiscreme/vanilla-bourbon.png",
+            price: 3,
+            name: "Vanilla Bourbon",
             description: "Das ist eine description.",
             category: "Tische"
         },
         {
-            img: "images/Tische/Tisch5.png",
-            price: 500,
-            name: "Tisch 5",
-            description: "Das ist eine description.",
-            category: "Tische"
-        },
-        {
-            img: "images/Tische/Tisch6.jpg",
-            price: 600,
-            name: "Tisch 6",
+            img: "images/eiscreme/mango-mousse.png",
+            price: 3,
+            name: "Mango Mousse",
             description: "Das ist eine description.",
             category: "Tische"
         },
@@ -88,5 +81,5 @@ var Aufgabe06;
             category: "Stühle"
         }
     ];
-})(Aufgabe06 || (Aufgabe06 = {}));
+})(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
 //# sourceMappingURL=data.js.map

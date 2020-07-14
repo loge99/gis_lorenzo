@@ -1,10 +1,13 @@
+html {
+    background-image: url(bg.png);
+    background-repeat: repeat;
+}
 
  body {
     font-family: barlow condensed, sans-serif;
     font-weight: normal;
     background-color:#faf2e3ea;
-    background-image: url(bg.png);
-    background-repeat: repeat;
+
 }
 
 
@@ -135,7 +138,7 @@ main p {
 
 
  
-.flex-container {
+.content {
     /* We first create a flex layout context */
     display: flex;
     flex-direction: row;
@@ -146,7 +149,7 @@ main p {
     list-style: none;
 }
 
-.flex-item {
+main div.product {
     padding-bottom: 30px;
     background: white;
     padding: 15px;
@@ -158,11 +161,18 @@ main p {
     border: 2px dotted rgba(0, 0, 0, 0.37);
     border-radius: 5px;
     box-shadow: 8px 8px 2px 1px rgba(0, 128, 128, 0.158);
+    width: 300px;
   }
 
-  .product-image {
-      width: 100px;
-      height: 100px;
+  .product .product-img {
+      width: 250px;
+      height: 290px;
+  }
+
+  .product .product-name {
+      font-size: 25px;
+      font-weight: 600;
+      text-align: center;
   }
 
   #add {
