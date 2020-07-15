@@ -5,8 +5,10 @@
     font-weight: normal;
     background-color: #faf2e3ea;
     background-image: url(../bg.png);
-    background-repeat: repeat;background-image: url(../bg.png);
     background-repeat: repeat;
+    max-width: 1920px;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 
@@ -17,9 +19,9 @@ header li {
 }
 
 #add {
-    vertical-align: center;
+    vertical-align: middle;
     float: left;
-    
+    padding-bottom: 30px;
 }
 
 #shoppingc {
@@ -28,6 +30,12 @@ header li {
     margin-left: 30px;
     margin-top: 20px;
     position: fixed;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 ul li div {
