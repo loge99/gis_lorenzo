@@ -7,9 +7,34 @@
     background-image: url(../bg.png);
     background-repeat: repeat;
     max-width: 1920px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
 
+}
+
+header span {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-end;
+    }
+    
+header span a {
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    padding-right: 10px;
+    padding-top: 5px;
+}    
+
+header span a:hover {
+    color: black;
+}
+
+main a {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
 }
 
 header li {
@@ -27,9 +52,10 @@ header li {
 #shoppingc {
     background-color: white;
     border-radius: 5px;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 20px;
     position: fixed;
+    padding-left: -30px;
+    padding-right: -30px;
 }
 
 .helper {
@@ -39,7 +65,7 @@ header li {
 }
 
 ul li div {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 header h1 {
@@ -120,11 +146,12 @@ header h2 {
 
 #hero {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 50px;
-    border: 10px solid rgb(255, 255, 255);
+    border-top: 10px solid rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(255, 255, 255);
+    max-width: 100%;
 }
 
 #herodiv {
@@ -222,13 +249,18 @@ main div.product {
     color: white;
     background-color: #f2533d;
     margin-right: 15px;
+    cursor: pointer;
   }
 
+  .product-btn:focus {
+    outline: none;
+}
+
   .product .product-btn:hover {
-    background-color: #d14937;
+    background-color: #e74e3a;
     color: white;
-    transition-duration: 600ms;
-    opacity:1;
+    opacity: 1;
+    transform: scale(1.01)
 }
 
   
@@ -236,7 +268,7 @@ main div.product {
   #add {
     width: 45px;
     vertical-align: right;
-    }
+}
 
   .Kategorie {
       font-size: 12px;
@@ -244,10 +276,10 @@ main div.product {
   }
 
   .vl {
-    border-left: 1.5px solid rgb(112, 112, 112);
-    height: 50px;
-    position: relative;
-    left: 50%;
+    border-left: 1.5px solid rgb(112, 112, 112); 
+    height: 50px; 
+    position:absolute; 
+    left: 50%; 
   }
  
   /*mobil*/

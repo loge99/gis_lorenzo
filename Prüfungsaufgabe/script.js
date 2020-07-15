@@ -50,7 +50,7 @@ var Prüfungsaufgabe;
         anzahl.innerHTML = warenzahlzaehler.toString();
         preis += parseFloat(_event.target?.getAttribute("preis"));
         console.log(preis + "€");
-        pricezahl.innerHTML = preis.toString();
+        pricezahl.innerHTML = preis.toString() + "€";
         document.getElementById("number")?.appendChild(anzahl);
         document.getElementById("price")?.appendChild(pricezahl);
     }
