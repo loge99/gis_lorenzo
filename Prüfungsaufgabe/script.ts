@@ -2,7 +2,6 @@ namespace Prüfungsaufgabe {
 
 
 
-
     for (let i: number = 0; i < data.length; i++) {
         let productDiv: HTMLDivElement = document.createElement("div");
         productDiv.classList.add("product");
@@ -49,11 +48,14 @@ namespace Prüfungsaufgabe {
         productBtn.innerText = "In die Tüte";
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
-        productBtn.addEventListener("click", zaehler);
+        productBtn.addEventListener("click", zaehler.bind(data[i]));
+        /* productBtn.addEventListener("click", dummytest.bind(data[i]));
+        productBtn.addEventListener("click", testtest.bind(data[i])); */
         productBtn.setAttribute("preis", data[i].price.toString());
 
         document.getElementById(data[i].category + "-content")?.appendChild(productDiv);
 
+        // testtest.bind(data[i])();
 
     }
 
@@ -65,41 +67,67 @@ namespace Prüfungsaufgabe {
     let pricezahl: HTMLElement = document.createElement("p");
 
 
-    function zaehler(_event: Event): void {
+    function zaehler(this: Product, _event: Event): void {
         warenzahlzaehler++;
         console.log(warenzahlzaehler);
         anzahl.innerHTML = warenzahlzaehler.toString();
 
-        preis += parseFloat((<HTMLInputElement>_event.target)?.getAttribute("preis")!);
+        preis += this.price;
         console.log(preis + "€");
         pricezahl.innerHTML = preis.toString() + "€";
+
+        let bild: HTMLImageElement = document.createElement("img");
+        bild.src = this.img;
+        bild.id = "bildgroesse";
+        document.getElementById("shoppingc")?.appendChild(bild);
+
         document.getElementById("number")?.appendChild(anzahl);
         document.getElementById("price")?.appendChild(pricezahl);
     }
 
 
-    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
-    
-    document.getElementById("showtische")?.addEventListener("click", showcategorytische);
-
-    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
-    //document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
+    /* let lokal: Product[] = new Array;
+    function dummytest(this: Product, _event: Event): void {
 
 
-    function hidecategorytische(_event: Event): void {
-        (<HTMLElement>document.getElementById("Tische-content")).style.display = "none";
-    }
-
-    function hidecategorystühle(_event: Event): void {
-        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
-    }
-
-    /* function showcategorystühle(_event: Event): void {
-        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "inline-grid";
+        lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
+        localStorage.setItem("storagespeicher", JSON.stringify(lokal));
     } */
+    /* function testtest(this: Product): void {
+        let getBild: Product[] = JSON.parse((localStorage.getItem("storagespeicher")!)); */
+    //for (let index: number = 0; index < getBild.length; index++) {
+    
+    //  }
+}
 
-    function showcategorytische(_event: Event): void {
-        (<HTMLElement>document.getElementById("Tische-content")).style.display = "flex";
-    } 
+
+
+
+document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+
+document.getElementById("showtische")?.addEventListener("click", showcategorytische);
+
+document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
+document.getElementById("showstühle")?.addEventListener("click", showcategorystühle);
+
+
+function hidecategorytische(_event: Event): void {
+    (<HTMLElement>document.getElementById("Tische-content")).style.display = "none";
+    (<HTMLElement>document.getElementById("hidetische")).style.display = "none";
+}
+
+function hidecategorystühle(_event: Event): void {
+    (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
+    (<HTMLElement>document.getElementById("hidestühle")).style.display = "none";
+
+}
+
+function showcategorystühle(_event: Event): void {
+    (<HTMLElement>document.getElementById("Stühle-content")).style.display = "flex";
+}
+
+function showcategorytische(_event: Event): void {
+    (<HTMLElement>document.getElementById("Tische-content")).style.display = "flex";
+}
 
 }

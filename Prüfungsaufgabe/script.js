@@ -35,9 +35,12 @@ var Prüfungsaufgabe;
         productBtn.innerText = "In die Tüte";
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
-        productBtn.addEventListener("click", zaehler);
+        productBtn.addEventListener("click", zaehler.bind(Prüfungsaufgabe.data[i]));
+        /* productBtn.addEventListener("click", dummytest.bind(data[i]));
+        productBtn.addEventListener("click", testtest.bind(data[i])); */
         productBtn.setAttribute("preis", Prüfungsaufgabe.data[i].price.toString());
         document.getElementById(Prüfungsaufgabe.data[i].category + "-content")?.appendChild(productDiv);
+        // testtest.bind(data[i])();
     }
     let warenzahlzaehler = 0;
     let anzahl = document.createElement("p");
@@ -48,27 +51,44 @@ var Prüfungsaufgabe;
         warenzahlzaehler++;
         console.log(warenzahlzaehler);
         anzahl.innerHTML = warenzahlzaehler.toString();
-        preis += parseFloat(_event.target?.getAttribute("preis"));
+        preis += this.price;
         console.log(preis + "€");
         pricezahl.innerHTML = preis.toString() + "€";
+        let bild = document.createElement("img");
+        bild.src = this.img;
+        bild.id = "bildgroesse";
+        document.getElementById("shoppingc")?.appendChild(bild);
         document.getElementById("number")?.appendChild(anzahl);
         document.getElementById("price")?.appendChild(pricezahl);
     }
-    document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
-    document.getElementById("showtische")?.addEventListener("click", showcategorytische);
-    document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
-    //document.getElementById("hidestühle")?.addEventListener("click", showcategorystühle);
-    function hidecategorytische(_event) {
-        document.getElementById("Tische-content").style.display = "none";
-    }
-    function hidecategorystühle(_event) {
-        document.getElementById("Stühle-content").style.display = "none";
-    }
-    /* function showcategorystühle(_event: Event): void {
-        (<HTMLElement>document.getElementById("Stühle-content")).style.display = "inline-grid";
+    /* let lokal: Product[] = new Array;
+    function dummytest(this: Product, _event: Event): void {
+
+
+        lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
+        localStorage.setItem("storagespeicher", JSON.stringify(lokal));
     } */
-    function showcategorytische(_event) {
-        document.getElementById("Tische-content").style.display = "flex";
-    }
+    /* function testtest(this: Product): void {
+        let getBild: Product[] = JSON.parse((localStorage.getItem("storagespeicher")!)); */
+    //for (let index: number = 0; index < getBild.length; index++) {
+    //  }
 })(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
+document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
+document.getElementById("showtische")?.addEventListener("click", showcategorytische);
+document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
+document.getElementById("showstühle")?.addEventListener("click", showcategorystühle);
+function hidecategorytische(_event) {
+    document.getElementById("Tische-content").style.display = "none";
+    document.getElementById("hidetische").style.display = "none";
+}
+function hidecategorystühle(_event) {
+    document.getElementById("Stühle-content").style.display = "none";
+    document.getElementById("hidestühle").style.display = "none";
+}
+function showcategorystühle(_event) {
+    document.getElementById("Stühle-content").style.display = "flex";
+}
+function showcategorytische(_event) {
+    document.getElementById("Tische-content").style.display = "flex";
+}
 //# sourceMappingURL=script.js.map

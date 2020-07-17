@@ -48,24 +48,51 @@
     </header>
 
     <main>
-        <div id="schritteins" class="vl"></div>
+        <div id="schritteins"></div>
+        <img src="images/line.png" id="line">
         <p>Schritt 1</p>
-        <div class="vl"></div>
-
+        <img src="images/line.png" id="line">
         <h1 id="Tische">Wähle Eissorten</h1>
         <a id="hidetische" href="#schrittzwei"> Fertig, nächster Schritt ></a>
         <div id="Tische-content" class="content"></div>
 
-        <div id="schrittzwei" class="vl"></div>
+        <img src="images/line.png" id="line">
+        <div id="schrittzwei"></div>
         <p>Schritt 2</p>
-        <div class="vl"></div>
-
-        <h1 id="Stühle">Toppings</h1>
+        <img src="images/line.png" id="line">
+        <h1 id="Stühle">Wähle Toppings</h1>
         <a id="showtische" href="#schritteins">Zurück</a>
         <a id="hidestühle" href="#"> Fertig, nächster Schritt ></a>
         <div id="Stühle-content" class="content"></div>
 
+        <img src="images/line.png" id="line">
+        <div id="schrittdrei"></div>
+        <p>Schritt 3</p>
+        <img src="images/line.png" id="line">
+        <h1 id="Behälter">Wähle Behälter</h1>
+        <a id="hidestühle"> Fertig!</a>
+        <div id="Behälter-content" class="content"></div>
+
     </main>
+
+    <footer>
+        <form action="https://gislorenzo.herokuapp.com/" method="GET">
+            <label for="vname">Vorname:
+              <input id="vname" name="vname">
+            </label><br>
+            <label for="nname">Nachname: 
+              <input id="nname" name="nname">
+            </label><br>
+    
+            <label for="männl">männlich</label>
+              <input type="radio" id="männl" name="geschlecht" value="0"><br>
+            <label for="weibl">weiblich</label>
+              <input type="radio" id="weibl" name="geschlecht" value="1">
+    
+        
+            <button id="Seenden" type="button">Senden</button>
+          </form>
+    </footer>
 </body>
 
 </html>

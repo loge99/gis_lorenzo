@@ -31,10 +31,18 @@ header span a:hover {
     color: black;
 }
 
+
+
 main a {
     width: 100%;
     flex-direction: row;
     display: flex;
+    justify-content: flex-start;
+    padding-left: 55%;  
+    padding-top: 10px;  
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: rgb(54, 54, 54);
 }
 
 header li {
@@ -162,9 +170,16 @@ header h2 {
 
 
 
+#bildgroesse {
+    width: 50px;
+}
 
-
-
+#line {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+}
  
 .content {
     /* We first create a flex layout context */

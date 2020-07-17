@@ -48,49 +48,41 @@ namespace Prüfungsaufgabe {
         {
 
             //>>> "Stühle"
-            img: "images/Stühle/Stuhl1.png",
-            price: 99,
-            name: "Stuhl 1",
-            description: "Das ist eine description.",
+            img: "images/toppings/strawberries.png",
+            price: 1.50,
+            name: "Erdbeerscheiben",
+            description: "Frische Erdbeeren, geschnitten.",
             category: "Stühle"
         },
         {
-            img: "images/Stühle/Stuhl1.png",
-            price: 100,
-            name: "Stuhl 2",
-            description: "Das ist eine description.",
+            img: "images/toppings/streusel.png",
+            price: 2,
+            name: "Schokostreusel",
+            description: "Dunkle Schokoladenstreusel.",
             category: "Stühle"
         },
         {
-            img: "images/Stühle/Stuhl1.png",
-            price: 150,
-            name: "Stuhl 3",
-            description: "Das ist eine description.",
+            img: "images/toppings/syrup.png",
+            price: 2.50,
+            name: "Schokosauce",
+            description: "Leckere Schokoladensauce.",
             category: "Stühle"
         },
+
+        //>>> "Waffel/Becher"
         {
-            img: "images/Stühle/Stuhl1.png",
-            price: 200,
-            name: "Stuhl 4",
-            description: "Das ist eine description.",
-            category: "Stühle"
+            img: "images/Behälter/Becher.png",
+            price: 0.50,
+            name: "Becher",
+            description: "Pappbecher aus recyceltem Material.",
+            category: "Behälter"
         },
         {
-            img: "images/Stühle/Stuhl1.png",
-            price: 250,
-            name: "Stuhl 5",
-            description: "Das ist eine description.",
-            category: "Stühle"
-        },
-        {
-            img: "images/Stühle/Stuhl1.png",
-            price: 300,
-            name: "Stuhl 6",
-            description: "Das ist eine description.",
-            category: "Stühle"
+            img: "images/Behälter/Waffel.png",
+            price: 0.50,
+            name: "Waffel",
+            description: "Knusprige Waffel.",
+            category: "Behälter"
         }
-
     ];
-
-
 }
