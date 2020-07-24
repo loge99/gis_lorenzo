@@ -1,8 +1,8 @@
 
 
  body {
-    font-family: barlow condensed, sans-serif;
-    font-weight: normal;
+    font-family: "Barlow";
+    font-size: 22px;
     background-color: #faf2e3ea;
     background-image: url(../bg.png);
     background-repeat: repeat;
@@ -20,9 +20,9 @@ header span {
     }
     
 header span a {
-    font-size: 11px;
+    font-size: 15px;
     text-decoration: none;
-    color: rgb(54, 54, 54);
+    color: rgb(110, 110, 110);
     padding-right: 10px;
     padding-top: 5px;
 }    
@@ -106,7 +106,7 @@ main h1 {
     padding-bottom: 20px;
     padding-right: 30px;
     padding-left: 30px;
-    font-weight: 600;
+    font-weight: bold;
     background-color: #f2533d;
     color: white;
     margin-bottom: 0px;
@@ -217,7 +217,7 @@ main div.product {
 
   .product .product-name {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500px;    
     text-align: center;
     display: block;
     color: rgb(75, 75, 75);
@@ -305,11 +305,14 @@ main div.product {
         font-size: 12px;
         display: inline-block;
         padding-top: 0px;
+        margin-top: 00px;
+
     }
     #price {
         font-size: 12px;
         padding-top: 1px;
         display: inline-block;
+        margin-top: 00px;
     }
     #shoppingc {
         margin-left: 10px;
@@ -320,14 +323,53 @@ main div.product {
         padding: 0px;
         padding-bottom: 10px;
     }
+    #hero {
+        margin-top: 20px;
+        height: 100px;
+    }
     div ul li {
         margin-top: -18px;
     }
     body {
-        font-family: barlow condensed, sans-serif;
+        font-family: "Barlow";
         font-weight: normal;
+        font-size: 20px;
         background-color: #faf2e3ea;
         background-image: url(../mobile_bg.png);
+    }
+    header span a {
+        font-size: 14px;
+    }
+    header h1 {
+        font-size: 22px;
+        margin-left: 30px;
+        width: 100px;
+        margin-top: -40px;
+        margin-bottom: 20px;
+        }
+    #line {
+        height: 20px;
+    }
+    main p {
+        font-size: 12px;
+    }
+    main h1 {
+        margin-left: 50px;
+        font-size: 17px;
+        width: 140px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-weight: 200;
+        color: white;
+    }
+    main a {
+        font-size: 12px;
+    }
+    #showtische {
+        margin-bottom: -10px;
+    }
 }
 
 /*tablet*/
