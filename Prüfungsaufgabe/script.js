@@ -25,22 +25,16 @@ var Prüfungsaufgabe;
         productPrice.innerText = Prüfungsaufgabe.data[i].price.toLocaleString("de-DE", { currency: "EUR", style: "currency" });
         productPrice.classList.add("product-price");
         productDiv.appendChild(productPrice);
-        /*   //Category
-          let productCategory: HTMLSpanElement = document.createElement("span");
-          productCategory.innerText = data [i].category;
-          productCategory.classList.add("product-category");
-          productDiv.appendChild(productCategory); */
         //Button
         let productBtn = document.createElement("button");
         productBtn.innerText = "In die Tüte";
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
         productBtn.addEventListener("click", zaehler.bind(Prüfungsaufgabe.data[i]));
-        /* productBtn.addEventListener("click", dummytest.bind(data[i]));
-        productBtn.addEventListener("click", testtest.bind(data[i])); */
+        productBtn.addEventListener("click", pushLocal.bind(Prüfungsaufgabe.data[i]));
+        //productBtn.addEventListener("click", testtest.bind(data[i])); 
         productBtn.setAttribute("preis", Prüfungsaufgabe.data[i].price.toString());
         document.getElementById(Prüfungsaufgabe.data[i].category + "-content")?.appendChild(productDiv);
-        // testtest.bind(data[i])();
     }
     let warenzahlzaehler = 0;
     let anzahl = document.createElement("p");
@@ -61,17 +55,11 @@ var Prüfungsaufgabe;
         document.getElementById("number")?.appendChild(anzahl);
         document.getElementById("price")?.appendChild(pricezahl);
     }
-    /* let lokal: Product[] = new Array;
-    function dummytest(this: Product, _event: Event): void {
-
-
+    let lokal = new Array;
+    function pushLocal(_event) {
         lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
         localStorage.setItem("storagespeicher", JSON.stringify(lokal));
-    } */
-    /* function testtest(this: Product): void {
-        let getBild: Product[] = JSON.parse((localStorage.getItem("storagespeicher")!)); */
-    //for (let index: number = 0; index < getBild.length; index++) {
-    //  }
+    }
 })(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
 document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
 document.getElementById("showtische")?.addEventListener("click", showcategorytische);

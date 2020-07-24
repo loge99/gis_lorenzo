@@ -4,6 +4,7 @@
 <head>
     <script src="data.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="server.js" defer></script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
@@ -20,7 +21,7 @@
 
     </h1>
     <header>
-        <span class="align-right"><a href="händlersite.html" >Händlerlogin</a></span>
+        <span class="align-right"><a href="händlersite.html" target="_blank">Händlerlogin</a></span>
         <div id="shoppingc">
             <span class="helper"></span>
             <ul>
@@ -76,7 +77,7 @@
     </main>
 
     <footer>
-        <form action="https://gislorenzo.herokuapp.com/" method="GET">
+        <form action="http://localhost:8100/" method="GET">
             <label for="vname">Voller Name:
               <input id="vname" name="vname">
             </label><br>
@@ -84,13 +85,9 @@
               <input id="nname" name="nname">
             </label><br>
     
-            <label for="männl">Waffel</label>
-              <input type="radio" id="männl" name="geschlecht" value="0"><br>
-            <label for="weibl">Becher</label>
-              <input type="radio" id="weibl" name="geschlecht" value="1">
     
         
-            <button id="Seenden" type="button">Senden</button>
+            <input id="Seenden" type="submit">Senden</button>
           </form>
     </footer>
 </body>

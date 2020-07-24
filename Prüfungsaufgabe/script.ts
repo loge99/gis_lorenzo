@@ -31,31 +31,17 @@ namespace Prüfungsaufgabe {
         productPrice.classList.add("product-price");
         productDiv.appendChild(productPrice);
 
-
-
-
-
-        /*   //Category
-          let productCategory: HTMLSpanElement = document.createElement("span");
-          productCategory.innerText = data [i].category;
-          productCategory.classList.add("product-category");
-          productDiv.appendChild(productCategory); */
-
         //Button
-
-
         let productBtn: HTMLButtonElement = document.createElement("button");
         productBtn.innerText = "In die Tüte";
         productBtn.classList.add("product-btn");
         productDiv.appendChild(productBtn);
         productBtn.addEventListener("click", zaehler.bind(data[i]));
-        /* productBtn.addEventListener("click", dummytest.bind(data[i]));
-        productBtn.addEventListener("click", testtest.bind(data[i])); */
+        productBtn.addEventListener("click", pushLocal.bind(data[i]));
+        //productBtn.addEventListener("click", testtest.bind(data[i])); 
         productBtn.setAttribute("preis", data[i].price.toString());
 
         document.getElementById(data[i].category + "-content")?.appendChild(productDiv);
-
-        // testtest.bind(data[i])();
 
     }
 
@@ -86,18 +72,11 @@ namespace Prüfungsaufgabe {
     }
 
 
-    /* let lokal: Product[] = new Array;
-    function dummytest(this: Product, _event: Event): void {
-
-
+    let lokal: Product[] = new Array;
+    function pushLocal(this: Product, _event: Event): void {
         lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
         localStorage.setItem("storagespeicher", JSON.stringify(lokal));
-    } */
-    /* function testtest(this: Product): void {
-        let getBild: Product[] = JSON.parse((localStorage.getItem("storagespeicher")!)); */
-    //for (let index: number = 0; index < getBild.length; index++) {
-    
-    //  }
+    }
 }
 
 
@@ -130,4 +109,4 @@ function showcategorytische(_event: Event): void {
     (<HTMLElement>document.getElementById("Tische-content")).style.display = "flex";
 }
 
-}
+

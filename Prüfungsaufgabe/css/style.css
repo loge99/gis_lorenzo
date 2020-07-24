@@ -20,7 +20,7 @@ header span {
     }
     
 header span a {
-    font-size: 14px;
+    font-size: 11px;
     text-decoration: none;
     color: rgb(54, 54, 54);
     padding-right: 10px;
@@ -55,6 +55,7 @@ header li {
     vertical-align: middle;
     float: left;
     padding-bottom: 30px;
+    margin-left: -20px;
 }
 
 #shoppingc {
@@ -131,10 +132,6 @@ main h3 {
     margin-top: -10px;
 }
 
-
-
-
-
 header h2 {
     position: relative;
     text-align: center;
@@ -168,8 +165,6 @@ header h2 {
 
 }
 
-
-
 #bildgroesse {
     width: 50px;
 }
@@ -202,7 +197,7 @@ main div.product {
     text-align: left;
     border: 0px;
     border-radius: 5px;
-    box-shadow: 8px 8px 2px 1px rgba(90, 216, 216, 0.158);
+    box-shadow: 05px 8px 10px 5px rgba(0, 0, 0, 0.041);
     width: 250px;
     margin-right: 20px;
     margin-top: 30px;
@@ -236,7 +231,7 @@ main div.product {
     font-size: 16px;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgb(104, 104, 104);
+    border-bottom: 2px solid #faf2e5;
   }
 
   .product .product-price {
@@ -278,8 +273,6 @@ main div.product {
     transform: scale(1.01)
 }
 
-  
-
   #add {
     width: 45px;
     vertical-align: right;
@@ -296,18 +289,45 @@ main div.product {
     position:absolute; 
     left: 50%; 
   }
- 
+  
+  
   /*mobil*/
   @media (max-width: 600px) {
-    header ul {
-        margin-bottom: 20px;
+    #logo {
+        width: 133px;
+        height: 97px;
     }
-    header h2 {
-        font-size: 40px;
+    #add {
+        width: 25px;
+        padding-bottom: 0px;
     }
-    .flex-item {
-        margin-bottom: 20px;
-    }   
+    #number {
+        font-size: 12px;
+        display: inline-block;
+        padding-top: 0px;
+    }
+    #price {
+        font-size: 12px;
+        padding-top: 1px;
+        display: inline-block;
+    }
+    #shoppingc {
+        margin-left: 10px;
+        position: fixed;
+        padding-left: 1111px;
+        padding-right: 0px;
+        padding-left: 10px;
+        padding: 0px;
+        padding-bottom: 10px;
+    }
+    div ul li {
+        margin-top: -18px;
+    }
+    body {
+        font-family: barlow condensed, sans-serif;
+        font-weight: normal;
+        background-color: #faf2e3ea;
+        background-image: url(../mobile_bg.png);
 }
 
 /*tablet*/
@@ -327,5 +347,5 @@ main div.product {
   .fa-search {
       padding-right: 20px;
   }
-}
+}}
 
