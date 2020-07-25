@@ -29,7 +29,7 @@ export namespace Prüfungsaufgabe {
                 console.log("Information: " + q.query[key]);
             }
 
-            _response.write("Thanks for ice cream order");
+            _response.write("Danke! Deine Bestellung ist bei uns eingegangen.");
 
             _response.end();
         }

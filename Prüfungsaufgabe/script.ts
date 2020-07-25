@@ -89,6 +89,9 @@ document.getElementById("showtische")?.addEventListener("click", showcategorytis
 document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
 document.getElementById("showstühle")?.addEventListener("click", showcategorystühle);
 
+document.getElementById("hidebecher")?.addEventListener("click", hidecategorybecher);
+
+
 
 function hidecategorytische(_event: Event): void {
     (<HTMLElement>document.getElementById("Tische-content")).style.display = "none";
@@ -98,7 +101,11 @@ function hidecategorytische(_event: Event): void {
 function hidecategorystühle(_event: Event): void {
     (<HTMLElement>document.getElementById("Stühle-content")).style.display = "none";
     (<HTMLElement>document.getElementById("hidestühle")).style.display = "none";
+}
 
+function hidecategorybecher(_event: Event): void {
+    (<HTMLElement>document.getElementById("Behälter-content")).style.display = "none";
+    (<HTMLElement>document.getElementById("hidebecher")).style.display = "none";
 }
 
 function showcategorystühle(_event: Event): void {

@@ -65,6 +65,7 @@ document.getElementById("hidetische")?.addEventListener("click", hidecategorytis
 document.getElementById("showtische")?.addEventListener("click", showcategorytische);
 document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
 document.getElementById("showstühle")?.addEventListener("click", showcategorystühle);
+document.getElementById("hidebecher")?.addEventListener("click", hidecategorybecher);
 function hidecategorytische(_event) {
     document.getElementById("Tische-content").style.display = "none";
     document.getElementById("hidetische").style.display = "none";
@@ -72,6 +73,10 @@ function hidecategorytische(_event) {
 function hidecategorystühle(_event) {
     document.getElementById("Stühle-content").style.display = "none";
     document.getElementById("hidestühle").style.display = "none";
+}
+function hidecategorybecher(_event) {
+    document.getElementById("Behälter-content").style.display = "none";
+    document.getElementById("hidebecher").style.display = "none";
 }
 function showcategorystühle(_event) {
     document.getElementById("Stühle-content").style.display = "flex";
