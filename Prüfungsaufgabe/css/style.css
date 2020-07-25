@@ -184,8 +184,7 @@ header h2 {
     justify-content: space-around;
     padding: 0;
     margin: 0;
-    list-style: none;
-    
+    list-style: none;  
 }
 
 main div.product {
@@ -212,7 +211,6 @@ main div.product {
     height: 290px;
     margin-top: -25px;
     margin-bottom: -20px;
-
   }
 
   .product .product-name {
@@ -242,7 +240,6 @@ main div.product {
     font-size: 25px;
     font-weight: 500;
     padding-top: 7px;
-
   }
 
   .product .product-btn { 
@@ -289,10 +286,57 @@ main div.product {
     position:absolute; 
     left: 50%; 
   }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 08px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 20%;
+    background-color: #f2533d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  input[type=submit]:hover {
+    background-color: #e74e3a;
+    color: white;
+    opacity: 1;
+    transform: scale(1.01)
+    }
+
+  input[type=submit]:focus {
+        outline: none;
+    }
+
+  #div-container {
+        border-radius: 5px;
+        background-color: #ffffff;
+        padding: 20px;
+        width: 40%;
+        text-align: center;
+        margin-left: 425px;
+  }
+  
+  #Bestellen {
+      margin-top: 50px;
+      margin-bottom: 50px;
+  }
   
   
   /*mobil*/
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     #logo {
         width: 133px;
         height: 97px;

@@ -5,7 +5,7 @@
     <script src="data.js" defer></script>
     <script src="script.js" defer></script>
     <script src="server.js" defer></script>
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
@@ -75,21 +75,24 @@
         <a id="hidestühle"> Fertig!</a>
         <div id="Behälter-content" class="content"></div>
 
-    </main>
 
+        <h1 id="Bestellen">Abschluss</h1>
+        <div id="div-container">
+            <form action="http://localhost:8100/" method="GET">
+
+                <label for="vname">Vorname Nachname:
+                    <input id="vname" type="text" name="vname">
+                </label><br>
+                <label for="nname">Adresse:
+                    <input id="nname" type="text" name="nname">
+                </label><br>
+
+                <input id="Seenden" value="Bestellen" type="submit"></button>
+            </form>
+        </div>
+    </main>
     <footer>
-        <form action="http://localhost:8100/" method="GET">
-            <label for="vname">Voller Name:
-              <input id="vname" name="vname">
-            </label><br>
-            <label for="nname">Adresse: 
-              <input id="nname" name="nname">
-            </label><br>
-    
-    
-        
-            <input id="Seenden" type="submit">Senden</button>
-          </form>
+
     </footer>
 </body>
 
