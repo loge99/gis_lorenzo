@@ -32,28 +32,26 @@ var Prüfungsaufgabe;
         productDiv.appendChild(productBtn);
         productBtn.addEventListener("click", zaehler.bind(Prüfungsaufgabe.data[i]));
         productBtn.addEventListener("click", pushLocal.bind(Prüfungsaufgabe.data[i]));
-        //productBtn.addEventListener("click", testtest.bind(data[i])); 
         productBtn.setAttribute("preis", Prüfungsaufgabe.data[i].price.toString());
         document.getElementById(Prüfungsaufgabe.data[i].category + "-content")?.appendChild(productDiv);
     }
-    let warenzahlzaehler = 0;
+    let warenZahlZaehler = 0;
     let anzahl = document.createElement("p");
-    //anzahl.setAttribute("id", "artikelzahlzaehler");
     let preis = 0;
-    let pricezahl = document.createElement("p");
+    let priceZahl = document.createElement("p");
     function zaehler(_event) {
-        warenzahlzaehler++;
-        console.log(warenzahlzaehler);
-        anzahl.innerHTML = warenzahlzaehler.toString();
+        warenZahlZaehler++;
+        console.log(warenZahlZaehler);
+        anzahl.innerHTML = warenZahlZaehler.toString();
         preis += this.price;
         console.log(preis + "€");
-        pricezahl.innerHTML = preis.toString() + "€";
+        priceZahl.innerHTML = preis.toString() + "€";
         let bild = document.createElement("img");
         bild.src = this.img;
         bild.id = "bildgroesse";
         document.getElementById("shoppingc")?.appendChild(bild);
         document.getElementById("number")?.appendChild(anzahl);
-        document.getElementById("price")?.appendChild(pricezahl);
+        document.getElementById("price")?.appendChild(priceZahl);
     }
     let lokal = new Array;
     function pushLocal(_event) {
@@ -61,27 +59,27 @@ var Prüfungsaufgabe;
         localStorage.setItem("storagespeicher", JSON.stringify(lokal));
     }
 })(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
-document.getElementById("hidetische")?.addEventListener("click", hidecategorytische);
-document.getElementById("showtische")?.addEventListener("click", showcategorytische);
-document.getElementById("hidestühle")?.addEventListener("click", hidecategorystühle);
-document.getElementById("showstühle")?.addEventListener("click", showcategorystühle);
-document.getElementById("hidebecher")?.addEventListener("click", hidecategorybecher);
-function hidecategorytische(_event) {
-    document.getElementById("Tische-content").style.display = "none";
-    document.getElementById("hidetische").style.display = "none";
+document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis);
+document.getElementById("showeis")?.addEventListener("click", showKategorieEis);
+document.getElementById("hidetoppings")?.addEventListener("click", hideKategorieToppings);
+document.getElementById("showtoppings")?.addEventListener("click", showKategorieToppings);
+document.getElementById("hidetecher")?.addEventListener("click", hideKategorieBecher);
+function hideKategorieEis(_event) {
+    document.getElementById("eis-content").style.display = "none";
+    document.getElementById("hideeis").style.display = "none";
 }
-function hidecategorystühle(_event) {
-    document.getElementById("Stühle-content").style.display = "none";
-    document.getElementById("hidestühle").style.display = "none";
+function showKategorieEis(_event) {
+    document.getElementById("eis-content").style.display = "flex";
 }
-function hidecategorybecher(_event) {
-    document.getElementById("Behälter-content").style.display = "none";
+function hideKategorieToppings(_event) {
+    document.getElementById("toppings-content").style.display = "none";
+    document.getElementById("hidetoppings").style.display = "none";
+}
+function showKategorieToppings(_event) {
+    document.getElementById("toppings-content").style.display = "flex";
+}
+function hideKategorieBecher(_event) {
+    document.getElementById("behälter-content").style.display = "none";
     document.getElementById("hidebecher").style.display = "none";
-}
-function showcategorystühle(_event) {
-    document.getElementById("Stühle-content").style.display = "flex";
-}
-function showcategorytische(_event) {
-    document.getElementById("Tische-content").style.display = "flex";
 }
 //# sourceMappingURL=script.js.map

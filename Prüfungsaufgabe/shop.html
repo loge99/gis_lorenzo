@@ -14,19 +14,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eis luigi</title>
-
-</head>
-
+</head> 
 
 <body>
-
-    </h1>
     <header>
         <span class="align-right"><a href="händlersite.html" target="_blank">Händlerlogin</a></span>
         <div id="shoppingc">
             <span class="helper"></span>
             <ul>
-                <li><img id="add" src="images/new_shopping_cart.png" alt="shoppingcart"></img></li>
+                <li><img id="add" src="images/new_shopping_cart.png" alt="shoppingcart"></li>
                 <li>
                     <div id="number"> Artikel:</div>
                 </li>
@@ -45,39 +41,37 @@
         <div>
             <h1 id="help">der eiscreme konfigurator</h1>
         </div>
-
-
     </header>
 
     <main>
         <div id="schritteins"></div>
-        <img src="images/line.png" id="line">
+        <img src="images/line.png" class="line" alt="linie">
         <p>Schritt 1</p>
-        <img src="images/line.png" id="line">
-        <h1 id="Tische">Wähle Eissorten</h1>
-        <a id="hidetische" href="#schrittzwei" class="button">Nächster Schritt ></a>
-        <div id="Tische-content" class="content"></div>
+        <img src="images/line.png" class="line" alt="linie">
+        <h1 id="eis">Wähle Eissorten</h1>
+        <a id="hideeis" href="#schrittzwei" class="button">Nächster Schritt ></a>
+        <div id="eis-content" class="content"></div>
 
-        <img src="images/line.png" id="line">
+        <img src="images/line.png" class="line" alt="linie">
         <div id="schrittzwei"></div>
         <p>Schritt 2</p>
-        <img src="images/line.png" id="line">
-        <h1 id="Stühle">Wähle Toppings</h1>
-        <a id="showtische" href="#schritteins">&lt Zurück</a>
-        <a id="hidestühle" href="#schrittdrei" class="button">Nächster Schritt ></a>
-        <div id="Stühle-content" class="content"></div>
+        <img src="images/line.png" class="line" alt="linie">
+        <h1 id="toppings">Wähle Toppings</h1>
+        <a id="showeis" href="#schritteins">&lt; Zurück</a>
+        <a id="hidetoppings" href="#schrittdrei" class="button">Nächster Schritt ></a>
+        <div id="toppings-content" class="content"></div>
 
         <div id="schrittdrei"></div>
-        <img src="images/line.png" id="line">
+        <img src="images/line.png" class="line" alt="linie">
         <p>Schritt 3</p>
-        <img src="images/line.png" id="line">
-        <h1 id="Behälter">Wähle Behälter</h1>
-        <a id="hidebecher" href="#Bestellen" class="button"> Bezahlen ></a>
-        <div id="Behälter-content" class="content"></div>
+        <img src="images/line.png" class="line" alt="linie">
+        <h1 id="behälter">Wähle Behälter</h1>
+        <a id="hidebecher" href="#bestellen" class="button"> Bezahlen ></a>
+        <div id="behälter-content" class="content"></div>
 
-        <img src="images/line.png" id="line">
+        <img src="images/line.png" class="line" alt="linie">
 
-        <h1 id="Bestellen">Abschluss</h1>
+        <h1 id="bestellen">Abschluss</h1>
         <div id="div-container">
             <form action="http://localhost:8100/" method="GET">
 
@@ -88,13 +82,13 @@
                     <input id="nname" type="text" name="nname">
                 </label><br>
 
-                <input id="Seenden" value="Bestellen" type="submit"></button>
+                <input id="seenden" value="Bestellen" type="submit">
             </form>
         </div>
     </main>
+
     <footer>
-
     </footer>
-</body>
 
+</body>
 </html>

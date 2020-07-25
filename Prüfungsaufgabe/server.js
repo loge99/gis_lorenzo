@@ -5,7 +5,7 @@ const Http = require("http");
 const url = require("url");
 var Prüfungsaufgabe;
 (function (Prüfungsaufgabe) {
-    console.log("Starting server");
+    console.log("Starte Server");
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
