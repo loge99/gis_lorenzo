@@ -4,11 +4,13 @@
     font-family: "Barlow";
     font-size: 22px;
     background-color: #faf2e3ea;
-    background-image: url(../bg.png);
+    background-image: url(images/bg.png);
     background-repeat: repeat;
     max-width: 1920px;
     margin-right: 0;
     margin-left: 0;
+    overflow-x:hidden;
+    
 
 }
 
@@ -334,7 +336,7 @@ main div.product {
         margin-bottom: 250px;
   }
   
-  #Bestellen {
+  #bestellen {
       margin-top: 50px;
       margin-bottom: 50px;
   }
@@ -389,7 +391,7 @@ main div.product {
         font-weight: normal;
         font-size: 20px;
         background-color: #faf2e3ea;
-        background-image: url(../mobile_bg.png);
+        background-image: url(images/mobile_bg.png);
     }
     header span a {
         font-size: 14px;
@@ -424,7 +426,7 @@ main div.product {
     main a {
         font-size: 14px;
     }
-    #showtische {
+    #showeis {
         margin-bottom: -10px;
     }
     main div.product {
@@ -587,7 +589,7 @@ main div.product {
         font-weight: normal;
         font-size: 20px;
         background-color: #faf2e3ea;
-        background-image: url(../mobile_bg.png);
+        background-image: url(images/mobile_bg.png);
     }
     header span a {
         font-size: 14px;
@@ -623,7 +625,7 @@ main div.product {
     main a {
         font-size: 12px;
     }
-    #showtische {
+    #showeis {
         margin-bottom: -10px;
     }
     main div.product {
@@ -746,7 +748,7 @@ main div.product {
             margin-left: 36px;
       }
       
-      #Bestellen {
+      #bestellen {
           margin-top: 50px;
           margin-bottom: 50px;
       }

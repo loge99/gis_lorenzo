@@ -1,47 +1,64 @@
 namespace Prüfungsaufgabe {
 
+    interface Product {
+        img: string;
+        price: number;
+        name: string;
+        description: string;
+        category: string;
+    }
+    async function erhalteJSON(_url: RequestInfo): Promise<void> {
+        let response: Response;
+        let datenJson: string;
+        response = await fetch(_url);
+        datenJson = await response.text();
+        pageBuild(JSON.parse(datenJson));
+    }
 
+    erhalteJSON("daten.json");
+    function pageBuild(_datenArray: Product[]): void {
 
-    for (let i: number = 0; i < data.length; i++) {
-        let productDiv: HTMLDivElement = document.createElement("div");
-        productDiv.classList.add("product");
+        for (let i: number = 0; i < _datenArray.length; i++) {
+            let productDiv: HTMLDivElement = document.createElement("div");
+            productDiv.classList.add("product");
 
-        //Name
-        let productName: HTMLSpanElement = document.createElement("span");
-        productName.innerText = data[i].name;
-        productName.classList.add("product-name");
-        productDiv.appendChild(productName);
+            //Name
+            let productName: HTMLSpanElement = document.createElement("span");
+            productName.innerText = _datenArray[i].name;
+            productName.classList.add("product-name");
+            productDiv.appendChild(productName);
 
-        //Image
-        let productImg: HTMLImageElement = document.createElement("img");
-        productImg.src = data[i].img;
-        productImg.alt = data[i].name;
-        productImg.classList.add("product-img");
-        productDiv.appendChild(productImg);
+            //Image
+            let productImg: HTMLImageElement = document.createElement("img");
+            productImg.src = _datenArray[i].img;
+            productImg.alt = _datenArray[i].name;
+            productImg.classList.add("product-img");
+            productDiv.appendChild(productImg);
 
-        //Description
-        let productDesc: HTMLSpanElement = document.createElement("span");
-        productDesc.innerText = data[i].description;
-        productDesc.classList.add("product-desc");
-        productDiv.appendChild(productDesc);
+            //Description
+            let productDesc: HTMLSpanElement = document.createElement("span");
+            productDesc.innerText = _datenArray[i].description;
+            productDesc.classList.add("product-desc");
+            productDiv.appendChild(productDesc);
 
-        //Price
-        let productPrice: HTMLSpanElement = document.createElement("span");
-        productPrice.innerText = data[i].price.toLocaleString("de-DE", { currency: "EUR", style: "currency" });
-        productPrice.classList.add("product-price");
-        productDiv.appendChild(productPrice);
+            //Price
+            let productPrice: HTMLSpanElement = document.createElement("span");
+            productPrice.innerText = _datenArray[i].price.toLocaleString("de-DE", { currency: "EUR", style: "currency" });
+            productPrice.classList.add("product-price");
+            productDiv.appendChild(productPrice);
 
-        //Button
-        let productBtn: HTMLButtonElement = document.createElement("button");
-        productBtn.innerText = "In die Tüte";
-        productBtn.classList.add("product-btn");
-        productDiv.appendChild(productBtn);
-        productBtn.addEventListener("click", zaehler.bind(data[i]));
-        productBtn.addEventListener("click", pushLocal.bind(data[i]));
-        productBtn.setAttribute("preis", data[i].price.toString());
+            //Button
+            let productBtn: HTMLButtonElement = document.createElement("button");
+            productBtn.innerText = "In die Tüte";
+            productBtn.classList.add("product-btn");
+            productDiv.appendChild(productBtn);
+            productBtn.addEventListener("click", zaehler.bind(_datenArray[i]));
+            productBtn.addEventListener("click", pushLocal.bind(_datenArray[i]));
+            productBtn.setAttribute("preis", _datenArray[i].price.toString());
 
-        document.getElementById(data[i].category + "-content")?.appendChild(productDiv);
+            document.getElementById(_datenArray[i].category + "-content")?.appendChild(productDiv);
 
+        }
     }
 
     let warenZahlZaehler: number = 0;
@@ -86,7 +103,7 @@ document.getElementById("showeis")?.addEventListener("click", showKategorieEis);
 document.getElementById("hidetoppings")?.addEventListener("click", hideKategorieToppings);
 document.getElementById("showtoppings")?.addEventListener("click", showKategorieToppings);
 
-document.getElementById("hidetecher")?.addEventListener("click", hideKategorieBecher);
+document.getElementById("hidebecher")?.addEventListener("click", hideKategorieBecher);
 
 
 

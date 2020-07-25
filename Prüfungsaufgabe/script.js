@@ -1,39 +1,49 @@
 "use strict";
 var Prüfungsaufgabe;
 (function (Prüfungsaufgabe) {
-    for (let i = 0; i < Prüfungsaufgabe.data.length; i++) {
-        let productDiv = document.createElement("div");
-        productDiv.classList.add("product");
-        //Name
-        let productName = document.createElement("span");
-        productName.innerText = Prüfungsaufgabe.data[i].name;
-        productName.classList.add("product-name");
-        productDiv.appendChild(productName);
-        //Image
-        let productImg = document.createElement("img");
-        productImg.src = Prüfungsaufgabe.data[i].img;
-        productImg.alt = Prüfungsaufgabe.data[i].name;
-        productImg.classList.add("product-img");
-        productDiv.appendChild(productImg);
-        //Description
-        let productDesc = document.createElement("span");
-        productDesc.innerText = Prüfungsaufgabe.data[i].description;
-        productDesc.classList.add("product-desc");
-        productDiv.appendChild(productDesc);
-        //Price
-        let productPrice = document.createElement("span");
-        productPrice.innerText = Prüfungsaufgabe.data[i].price.toLocaleString("de-DE", { currency: "EUR", style: "currency" });
-        productPrice.classList.add("product-price");
-        productDiv.appendChild(productPrice);
-        //Button
-        let productBtn = document.createElement("button");
-        productBtn.innerText = "In die Tüte";
-        productBtn.classList.add("product-btn");
-        productDiv.appendChild(productBtn);
-        productBtn.addEventListener("click", zaehler.bind(Prüfungsaufgabe.data[i]));
-        productBtn.addEventListener("click", pushLocal.bind(Prüfungsaufgabe.data[i]));
-        productBtn.setAttribute("preis", Prüfungsaufgabe.data[i].price.toString());
-        document.getElementById(Prüfungsaufgabe.data[i].category + "-content")?.appendChild(productDiv);
+    async function erhalteJSON(_url) {
+        let response;
+        let datenJson;
+        response = await fetch(_url);
+        datenJson = await response.text();
+        pageBuild(JSON.parse(datenJson));
+    }
+    erhalteJSON("daten.json");
+    function pageBuild(_datenArray) {
+        for (let i = 0; i < _datenArray.length; i++) {
+            let productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            //Name
+            let productName = document.createElement("span");
+            productName.innerText = _datenArray[i].name;
+            productName.classList.add("product-name");
+            productDiv.appendChild(productName);
+            //Image
+            let productImg = document.createElement("img");
+            productImg.src = _datenArray[i].img;
+            productImg.alt = _datenArray[i].name;
+            productImg.classList.add("product-img");
+            productDiv.appendChild(productImg);
+            //Description
+            let productDesc = document.createElement("span");
+            productDesc.innerText = _datenArray[i].description;
+            productDesc.classList.add("product-desc");
+            productDiv.appendChild(productDesc);
+            //Price
+            let productPrice = document.createElement("span");
+            productPrice.innerText = _datenArray[i].price.toLocaleString("de-DE", { currency: "EUR", style: "currency" });
+            productPrice.classList.add("product-price");
+            productDiv.appendChild(productPrice);
+            //Button
+            let productBtn = document.createElement("button");
+            productBtn.innerText = "In die Tüte";
+            productBtn.classList.add("product-btn");
+            productDiv.appendChild(productBtn);
+            productBtn.addEventListener("click", zaehler.bind(_datenArray[i]));
+            productBtn.addEventListener("click", pushLocal.bind(_datenArray[i]));
+            productBtn.setAttribute("preis", _datenArray[i].price.toString());
+            document.getElementById(_datenArray[i].category + "-content")?.appendChild(productDiv);
+        }
     }
     let warenZahlZaehler = 0;
     let anzahl = document.createElement("p");
@@ -63,7 +73,7 @@ document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis);
 document.getElementById("showeis")?.addEventListener("click", showKategorieEis);
 document.getElementById("hidetoppings")?.addEventListener("click", hideKategorieToppings);
 document.getElementById("showtoppings")?.addEventListener("click", showKategorieToppings);
-document.getElementById("hidetecher")?.addEventListener("click", hideKategorieBecher);
+document.getElementById("hidebecher")?.addEventListener("click", hideKategorieBecher);
 function hideKategorieEis(_event) {
     document.getElementById("eis-content").style.display = "none";
     document.getElementById("hideeis").style.display = "none";

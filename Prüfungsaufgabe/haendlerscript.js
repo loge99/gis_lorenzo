@@ -17,7 +17,7 @@ var Prüfungsaufgabe;
         productImg.alt = bestellung[i].name;
         productImg.classList.add("product-img");
         productDiv.appendChild(productImg);
-        document.getElementById(bestellung[i].category + "-content")?.appendChild(productDiv);
+        document.getElementById("eis-content")?.appendChild(productDiv);
     }
 })(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
 //# sourceMappingURL=haendlerscript.js.map

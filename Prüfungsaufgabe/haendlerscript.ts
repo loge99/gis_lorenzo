@@ -33,7 +33,7 @@ namespace Prüfungsaufgabe {
 
 
 
-        document.getElementById(bestellung[i].category + "-content")?.appendChild(productDiv);
+        document.getElementById("eis-content")?.appendChild(productDiv);
 
     }
 
