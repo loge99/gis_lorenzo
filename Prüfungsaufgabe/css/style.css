@@ -495,8 +495,11 @@ main div.product {
     }
 }
 
+
+
+
 /*mobil*/
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #logo {
         width: 133px;
         height: 97px;
@@ -545,13 +548,14 @@ main div.product {
         font-size: 14px;
     }
     header h1 {
-        font-size: 22px;
-        margin-left: 70px;
+        font-size: 25px;
+        margin-left: 40px;
         color: red;
-        width: 100px;
+        width: 200px;
         margin-top: -40px;
         margin-bottom: 20px;
-        }
+        font-weight: bold;
+    }
     #line {
         height: 20px;
     }
@@ -559,15 +563,17 @@ main div.product {
         font-size: 12px;
     }
     main h1 {
-        margin-left: 80px;
+        margin-left: 00px;
         font-size: 17px;
-        width: 140px;
+        width: 100%;
         padding-top: 10px;
         padding-bottom: 12px;
-        padding-right: 15px;
-        padding-left: 15px;
         font-weight: 200;
-        color: white;
+        font-weight: 600;
+        color: #f2533d;
+        background-color: white;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     main a {
         font-size: 12px;
@@ -587,6 +593,7 @@ main div.product {
         border-radius: 5px;
         box-shadow: 05px 8px 10px 5px rgba(0, 0, 0, 0.041);
         width: 250px;
+        margin-right: 0px;
 
       }
     .product .product-img {
@@ -652,5 +659,51 @@ main div.product {
         opacity: 1;
         transform: scale(1.01)
     }
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 08px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    
+      input[type=submit] {
+        width: 70%;
+        background-color: #f2533d;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    
+      input[type=submit]:hover {
+        background-color: #e74e3a;
+        color: white;
+        opacity: 1;
+        transform: scale(1.01)
+        }
+    
+      input[type=submit]:focus {
+            outline: none;
+        }
+    
+      #div-container {
+            border-radius: 5px;
+            background-color: #ffffff;
+            padding: 20px;
+            width: 70%;
+            text-align: center;
+            margin-left: 36px;
+      }
+      
+      #Bestellen {
+          margin-top: 50px;
+          margin-bottom: 50px;
+      }
 }
 
