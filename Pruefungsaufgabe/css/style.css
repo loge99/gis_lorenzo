@@ -9,7 +9,7 @@
     max-width: 1920px;
     margin-right: 0;
     margin-left: 0;
-    overflow-x:hidden;
+    overflow-x: hidden;
     
 
 }
@@ -304,6 +304,7 @@ main div.product {
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
+    margin-top: 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -332,18 +333,32 @@ main div.product {
         padding: 20px;
         width: 40%;
         text-align: center;
+        box-shadow: 05px 8px 10px 5px rgba(0, 0, 0, 0.041);
         margin-left: 435px;
         margin-bottom: 250px;
+        margin-top: 30px;
   }
   
-  #bestellen {
-      margin-top: 50px;
-      margin-bottom: 50px;
+  section #bestellen {
+      color: #f2533d;
+      font-size: 35px;
+      border-radius: 0px;
+      text-align: center;
+      padding-top: 00px;
+      padding-bottom: 40px;
+      padding-right: 30px;
+      padding-left: 30px;
+      font-weight: bold;
+      background-color: white;
+      margin-bottom: 0px;
   }
+
+  
   
 .button {
-      color: rgb(0, 180, 0);
+      color: rgb(0, 207, 45);
       font-weight: 400;
+      margin-top: 0px;
 }
 
   
@@ -408,6 +423,11 @@ main div.product {
     #line {
         height: 20px;
     }
+
+    .line #specialline {
+        margin-top: 250px;
+    }
+
     main p {
         font-size: 15px;
     }
