@@ -1,4 +1,4 @@
-namespace Prüfungsaufgabe {
+namespace Pruefungsaufgabe {
 
     interface Product {
         img: string;
@@ -89,7 +89,7 @@ namespace Prüfungsaufgabe {
 
     let lokal: Product[] = new Array;
     function pushLocal(this: Product, _event: Event): void {
-        lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
+        lokal.push(this); //push this (das angeklickte) in array und wird in lokal storage gepackt
         localStorage.setItem("storagespeicher", JSON.stringify(lokal));
     }
 

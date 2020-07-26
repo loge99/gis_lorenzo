@@ -1,7 +1,7 @@
 import * as Http from "http";
 import * as url from "url";
 
-export namespace Prüfungsaufgabe {
+export namespace Pruefungsaufgabe {
     console.log("Starte Server");
     let port: number = Number(process.env.PORT);
     if (!port)

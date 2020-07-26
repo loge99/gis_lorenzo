@@ -1,4 +1,4 @@
-namespace Prüfungsaufgabe {
+namespace Pruefungsaufgabe {
 
     interface Product {
         img: string;
@@ -11,13 +11,13 @@ namespace Prüfungsaufgabe {
     let bestellung: Product[] = JSON.parse((localStorage.getItem("storagespeicher")!));
     console.log(bestellung);
 
-    
-    
+
+
     for (let i: number = 0; i < bestellung.length; i++) {
 
         let productDiv: HTMLDivElement = document.createElement("div");
         productDiv.classList.add("product");
-    
+
         //Name
         let productName: HTMLSpanElement = document.createElement("span");
         productName.innerText = bestellung[i].name;

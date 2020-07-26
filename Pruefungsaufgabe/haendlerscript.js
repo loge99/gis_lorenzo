@@ -1,6 +1,6 @@
 "use strict";
-var Prüfungsaufgabe;
-(function (Prüfungsaufgabe) {
+var Pruefungsaufgabe;
+(function (Pruefungsaufgabe) {
     let bestellung = JSON.parse((localStorage.getItem("storagespeicher")));
     console.log(bestellung);
     for (let i = 0; i < bestellung.length; i++) {
@@ -19,5 +19,5 @@ var Prüfungsaufgabe;
         productDiv.appendChild(productImg);
         document.getElementById("eis-content")?.appendChild(productDiv);
     }
-})(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
+})(Pruefungsaufgabe || (Pruefungsaufgabe = {}));
 //# sourceMappingURL=haendlerscript.js.map

@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Prüfungsaufgabe = void 0;
+exports.Pruefungsaufgabe = void 0;
 const Http = require("http");
 const url = require("url");
-var Prüfungsaufgabe;
-(function (Prüfungsaufgabe) {
+var Pruefungsaufgabe;
+(function (Pruefungsaufgabe) {
     console.log("Starte Server");
     let port = Number(process.env.PORT);
     if (!port)
@@ -29,5 +29,5 @@ var Prüfungsaufgabe;
             _response.end();
         }
     }
-})(Prüfungsaufgabe = exports.Prüfungsaufgabe || (exports.Prüfungsaufgabe = {}));
+})(Pruefungsaufgabe = exports.Pruefungsaufgabe || (exports.Pruefungsaufgabe = {}));
 //# sourceMappingURL=server.js.map

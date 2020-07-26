@@ -1,6 +1,6 @@
 "use strict";
-var Prüfungsaufgabe;
-(function (Prüfungsaufgabe) {
+var Pruefungsaufgabe;
+(function (Pruefungsaufgabe) {
     async function erhalteJSON(_url) {
         let response;
         let datenJson;
@@ -65,7 +65,7 @@ var Prüfungsaufgabe;
     }
     let lokal = new Array;
     function pushLocal(_event) {
-        lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
+        lokal.push(this); //push this (das angeklickte) in array und wird in lokal storage gepackt
         localStorage.setItem("storagespeicher", JSON.stringify(lokal));
     }
     document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis);
@@ -89,5 +89,5 @@ var Prüfungsaufgabe;
         document.getElementById("toppings-content").style.display = "flex";
         document.getElementById("behälter-content").style.display = "flex";
     }
-})(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
+})(Pruefungsaufgabe || (Pruefungsaufgabe = {}));
 //# sourceMappingURL=script.js.map
