@@ -560,6 +560,13 @@ main div.product {
   form label {
       font-size: 15px;
   }
+  #bestellen {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 30%;
+    padding-right: 0px;
+    margin-left: 42px;
+}
 }
 
 
@@ -571,6 +578,8 @@ main div.product {
         width: 133px;
         height: 97px;
     }
+
+    
     #add {
         width: 25px;
         padding-bottom: 0px;
@@ -771,6 +780,9 @@ main div.product {
       #bestellen {
           margin-top: 50px;
           margin-bottom: 50px;
+          width: 30%;
+          padding-right: 0px;
+          margin-left: 20px;
       }
 }
 
