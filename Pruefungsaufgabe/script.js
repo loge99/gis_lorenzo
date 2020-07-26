@@ -68,28 +68,26 @@ var Prüfungsaufgabe;
         lokal.push(this); //push this (das angeklickte) in array und das wird in den lokal storage gepackt
         localStorage.setItem("storagespeicher", JSON.stringify(lokal));
     }
+    document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis);
+    document.getElementById("hidetoppings")?.addEventListener("click", hideKategorieToppings);
+    document.getElementById("hidebecher")?.addEventListener("click", hideKategorieBecher);
+    document.getElementById("showall")?.addEventListener("click", showAllKategorien);
+    function hideKategorieEis(_event) {
+        document.getElementById("eis-content").style.display = "none";
+        document.getElementById("hideeis").style.display = "none";
+    }
+    function hideKategorieToppings(_event) {
+        document.getElementById("toppings-content").style.display = "none";
+        document.getElementById("hidetoppings").style.display = "none";
+    }
+    function hideKategorieBecher(_event) {
+        document.getElementById("behälter-content").style.display = "none";
+        document.getElementById("hidebecher").style.display = "none";
+    }
+    function showAllKategorien(_event) {
+        document.getElementById("eis-content").style.display = "flex";
+        document.getElementById("toppings-content").style.display = "flex";
+        document.getElementById("behälter-content").style.display = "flex";
+    }
 })(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
-document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis);
-document.getElementById("showeis")?.addEventListener("click", showKategorieEis);
-document.getElementById("hidetoppings")?.addEventListener("click", hideKategorieToppings);
-document.getElementById("showtoppings")?.addEventListener("click", showKategorieToppings);
-document.getElementById("hidebecher")?.addEventListener("click", hideKategorieBecher);
-function hideKategorieEis(_event) {
-    document.getElementById("eis-content").style.display = "none";
-    document.getElementById("hideeis").style.display = "none";
-}
-function showKategorieEis(_event) {
-    document.getElementById("eis-content").style.display = "flex";
-}
-function hideKategorieToppings(_event) {
-    document.getElementById("toppings-content").style.display = "none";
-    document.getElementById("hidetoppings").style.display = "none";
-}
-function showKategorieToppings(_event) {
-    document.getElementById("toppings-content").style.display = "flex";
-}
-function hideKategorieBecher(_event) {
-    document.getElementById("behälter-content").style.display = "none";
-    document.getElementById("hidebecher").style.display = "none";
-}
 //# sourceMappingURL=script.js.map

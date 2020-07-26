@@ -58,7 +58,6 @@
             <p>Schritt 2</p>
             <img src="images/line.png" class="line" alt="linie">
             <h1 id="toppings">Wähle Toppings</h1>
-            <a id="showeis" href="#schritteins">&lt; Zurück</a>
             <a id="hidetoppings" href="#schrittdrei" class="button">Nächster Schritt ></a>
             <div id="toppings-content" class="content"></div>
 
@@ -70,11 +69,15 @@
             <a id="hidebecher" href="#bestellen" class="button"> Bezahlen ></a>
             <div id="behälter-content" class="content"></div>
             <img id="specialline" src="images/line.png" class="line" alt="linie">
+            
+            
+            <a id="showall" href="#schritteins">&lt; Ich möchte noch etwas ändern</a>
 
         </section>
 
         <section id="div-container">
             <h1 id="bestellen">Abschluss</h1>
+            
             <form action="http://localhost:8100/" method="GET">
                 <label for="vname">Vorname Nachname:
                     <input id="vname" type="text" name="vname">
