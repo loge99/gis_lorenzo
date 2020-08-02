@@ -1,8 +1,12 @@
 "use strict";
 var Pruefungsaufgabe;
 (function (Pruefungsaufgabe) {
-    let bestellung = JSON.parse((localStorage.getItem("storagespeicher")));
-    console.log(bestellung);
+    console.log(localStorage.getItem("storagespeicher"));
+    let bestellung = JSON.parse(localStorage.getItem("storagespeicher")); //Bestellung is array vom typ product, variable Bestellungen "Storagespeicher" ais local storage holen ; macht es zu array weil davor string
+    //Ausrufezeichen ignoriert dass string leer sein kann, ohne ausrufe zeichen gibt es fehlermeldumg die davor warnt
+    //localStorage holt sich item und parst es im gleichen 
+    console.log(bestellung); //Schreibe inhalt von Variable Bestellung in Console
+    //Generierung der Bestellungen
     for (let i = 0; i < bestellung.length; i++) {
         let productDiv = document.createElement("div");
         productDiv.classList.add("product");
@@ -18,6 +22,7 @@ var Pruefungsaufgabe;
         productImg.classList.add("product-img");
         productDiv.appendChild(productImg);
         document.getElementById("eis-content")?.appendChild(productDiv);
+        //Den Product Div der die namen und images enthält em eis-content bereich zuweisen
     }
 })(Pruefungsaufgabe || (Pruefungsaufgabe = {}));
 //# sourceMappingURL=haendlerscript.js.map

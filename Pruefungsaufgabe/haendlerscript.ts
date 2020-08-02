@@ -1,18 +1,20 @@
 namespace Pruefungsaufgabe {
 
-    interface Product {
+    interface Product { //Erstelle Interface
         img: string;
         price: number;
         name: string;
         description: string;
         category: string;
     }
+    console.log(localStorage.getItem("storagespeicher"));
+    let bestellung: Product[] = JSON.parse(localStorage.getItem("storagespeicher")!); //Bestellung is array vom typ product, variable Bestellungen "Storagespeicher" ais local storage holen ; macht es zu array weil davor string
+  //Ausrufezeichen ignoriert dass string leer sein kann, ohne ausrufe zeichen gibt es fehlermeldumg die davor warnt
+    //localStorage holt sich item und parst es im gleichen 
+    console.log(bestellung); //Schreibe inhalt von Variable Bestellung in Console
 
-    let bestellung: Product[] = JSON.parse((localStorage.getItem("storagespeicher")!));
-    console.log(bestellung);
 
-
-
+    //Generierung der Bestellungen
     for (let i: number = 0; i < bestellung.length; i++) {
 
         let productDiv: HTMLDivElement = document.createElement("div");
@@ -34,6 +36,7 @@ namespace Pruefungsaufgabe {
 
 
         document.getElementById("eis-content")?.appendChild(productDiv);
+        //Den Product Div der die namen und images enthält em eis-content bereich zuweisen
 
     }
 

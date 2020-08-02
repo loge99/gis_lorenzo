@@ -2,13 +2,20 @@
 var Pruefungsaufgabe;
 (function (Pruefungsaufgabe) {
     async function erhalteJSON(_url) {
-        let response;
-        let datenJson;
-        response = await fetch(_url);
-        datenJson = await response.text();
-        pageBuild(JSON.parse(datenJson));
+        // "_url" ist nur name
+        // Hover"Request info" __ |__ = welche datentypen kann es sein    
+        // -Erschaffe Funktion erhalteJSON, arbeitet während was anderes schon passiert, weil sie ladezeit braucht
+        //url ist name, daten.json wir unten mit 
+        let response; //-Response ist vom Type Response deklarieren
+        let datenJson; //-"datenJson" ist vom Type String deklareiren, 
+        response = await fetch(_url); //wenn was in _url ist ( hier daten.json) dann packkt er das in die response, (versprechen)
+        console.log(response);
+        //await unterbricht die funktion, weils wartet "await"
+        datenJson = await response.text(); //bevor datenjson angelegt wird wartet man auf response, und .text macht das ganze  string
+        pageBuild(JSON.parse(datenJson)); //wird datenjson json zu array
+        console.log(JSON.parse(datenJson));
     }
-    erhalteJSON("daten.json");
+    erhalteJSON("daten.json"); //-Gib der Funktion den parameter daten.json mit ; aufruf der funktion
     function pageBuild(_datenArray) {
         for (let i = 0; i < _datenArray.length; i++) {
             let productDiv = document.createElement("div");
@@ -39,36 +46,38 @@ var Pruefungsaufgabe;
             productBtn.innerText = "In die Tüte";
             productBtn.classList.add("product-btn");
             productDiv.appendChild(productBtn);
-            productBtn.addEventListener("click", zaehler.bind(_datenArray[i]));
-            productBtn.addEventListener("click", pushLocal.bind(_datenArray[i]));
+            productBtn.addEventListener("click", zaehler.bind(_datenArray[i])); //Ermöglicht zugriff auf datenarray an stelle in FUnktion zähler
+            productBtn.addEventListener("click", pushLocal.bind(_datenArray[i])); //.bind ermöglicht dass man auf; 
             productBtn.setAttribute("preis", _datenArray[i].price.toString());
             document.getElementById(_datenArray[i].category + "-content")?.appendChild(productDiv);
         }
     }
-    let warenZahlZaehler = 0;
-    let anzahl = document.createElement("p");
-    let preis = 0;
-    let priceZahl = document.createElement("p");
+    let warenZahlZaehler = 0; //Zähler für Shopping Cart: Artikel
+    let anzahl = document.createElement("p"); //ab damit in die shop.html
+    let preis = 0; //Zähler für Shopping Cart: Preis
+    let priceZahl = document.createElement("p"); //ab damit in die shop.html
     function zaehler(_event) {
         warenZahlZaehler++;
         console.log(warenZahlZaehler);
         anzahl.innerHTML = warenZahlZaehler.toString();
-        preis += this.price;
+        preis += this.price; //-
         console.log(preis + "€");
         priceZahl.innerHTML = preis.toString() + "€";
         let bild = document.createElement("img");
         bild.src = this.img;
-        bild.id = "bildgroesse";
+        bild.id = "bildgroesse"; //Für CSS
         document.getElementById("shoppingc")?.appendChild(bild);
         document.getElementById("number")?.appendChild(anzahl);
         document.getElementById("price")?.appendChild(priceZahl);
     }
-    let lokal = new Array;
+    let lokal = new Array; //Erstellt variable vom typ "produkt Array"; "= new Array" braucht man ned
     function pushLocal(_event) {
-        lokal.push(this); //push this (das angeklickte) in array und wird in lokal storage gepackt
-        localStorage.setItem("storagespeicher", JSON.stringify(lokal));
+        lokal.push(this); //inhalt von this wird in array lokal gepusht ; this ist der artikel der gerade geklickt wurde
+        localStorage.setItem("storagespeicher", JSON.stringify(lokal)); //speichert als string weil an den local storage nur ein string übergeben werden kann
+        //Storage speicher is key
+        //json.stringify is value
     }
-    document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis);
+    document.getElementById("hideeis")?.addEventListener("click", hideKategorieEis); //l.98-118: Hide and Show von "Bezahlen", "Nächste"
     document.getElementById("hidetoppings")?.addEventListener("click", hideKategorieToppings);
     document.getElementById("hidebecher")?.addEventListener("click", hideKategorieBecher);
     document.getElementById("showall")?.addEventListener("click", showAllKategorien);
