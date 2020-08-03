@@ -8,13 +8,15 @@ namespace Pruefungsaufgabe {
         category: string;
     }
     console.log(localStorage.getItem("storagespeicher"));
-    let bestellung: Product[] = JSON.parse(localStorage.getItem("storagespeicher")!); //Bestellung is array vom typ product, variable Bestellungen "Storagespeicher" ais local storage holen ; macht es zu array weil davor string
+    let bestellung: Product[] = JSON.parse(localStorage.getItem("storagespeicher")!); //Bestellung is array vom typ product, variable Bestellungen "Storagespeicher" 
+    //ais local storage holen ; macht es zu array weil davor string
   //Ausrufezeichen ignoriert dass string leer sein kann, ohne ausrufe zeichen gibt es fehlermeldumg die davor warnt
     //localStorage holt sich item und parst es im gleichen 
     console.log(bestellung); //Schreibe inhalt von Variable Bestellung in Console
 
 
     //Generierung der Bestellungen
+    //for schleife ist zum zuweisen der produkte im local storage auf die seite, 
     for (let i: number = 0; i < bestellung.length; i++) {
 
         let productDiv: HTMLDivElement = document.createElement("div");

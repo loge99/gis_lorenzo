@@ -7,25 +7,27 @@ namespace Pruefungsaufgabe { //Erstelle Namespace
         description: string;
         category: string;
     }
-    async function erhalteJSON(_url: RequestInfo): Promise<void> { //"Async"=asynchrone funktion heipt ausführung der funktion kann unterbrochen werden und weiterlaufen wenn die answer da sit 
+    async function erhalteJSON(_url: RequestInfo): Promise<void> { //"Async"=asynchrone funktion heißt ausführung der funktion kann unterbrochen werden und weiterlaufen wenn die answer da sit 
+        //Objekt vom Typ promise
         // "_url" ist nur name
         // Hover"Request info" __ |__ = welche datentypen kann es sein    
         // -Erschaffe Funktion erhalteJSON, arbeitet während was anderes schon passiert, weil sie ladezeit braucht
-        //url ist name, daten.json wir unten mit 
-        let response: Response; //-Response ist vom Type Response deklarieren
+        //url ist name, daten.json schicken wir unten mit 
+        let response: Response; //Response ist vom Type Response deklarieren; Antwort von daten.json an client
         let datenJson: string; //-"datenJson" ist vom Type String deklareiren, 
         response = await fetch(_url); //wenn was in _url ist ( hier daten.json) dann packkt er das in die response, (versprechen)
-        console.log(response);
-        //await unterbricht die funktion, weils wartet "await"
-        datenJson = await response.text(); //bevor datenjson angelegt wird wartet man auf response, und .text macht das ganze  string
-        pageBuild(JSON.parse(datenJson)); //wird datenjson json zu array
-        console.log(JSON.parse(datenJson));
+        //console.log(response);
         
+        //await unterbricht die funktion INNERHALB pasuerit code, weils wartet "await"
+        datenJson = await response.text(); //bevor datenjson angelegt wird wartet man auf response, und .text macht das ganze  string
+        pageBuild(JSON.parse(datenJson)); //wird datenjson json zu 
+        //json parse kann nur strings zu arrays parsen, deshalb muss die response erst in eine variable vom typ string gepackt werden
+        //console.log(JSON.parse(datenJson));
     }
  
     erhalteJSON("daten.json"); //-Gib der Funktion den parameter daten.json mit ; aufruf der funktion
     function pageBuild(_datenArray: Product[]): void {  //function pagebuild wirdd in asny funtion aufggerufen; funktions paramter vom typ product
-
+                    
         for (let i: number = 0; i < _datenArray.length; i++) {
             let productDiv: HTMLDivElement = document.createElement("div");
             productDiv.classList.add("product");
@@ -60,7 +62,7 @@ namespace Pruefungsaufgabe { //Erstelle Namespace
             productBtn.innerText = "In die Tüte";
             productBtn.classList.add("product-btn");
             productDiv.appendChild(productBtn);
-            productBtn.addEventListener("click", zaehler.bind(_datenArray[i])); //Ermöglicht zugriff auf datenarray an stelle in FUnktion zähler
+            productBtn.addEventListener("click", zaehler.bind(_datenArray[i])); //Ermöglicht zugriff auf datenarray an stelle in FUnktion zähler, weil wir ja gerade an dieser stelle i in der funktion sind
             productBtn.addEventListener("click", pushLocal.bind(_datenArray[i])); //.bind ermöglicht dass man auf; 
             productBtn.setAttribute("preis", _datenArray[i].price.toString());
 
@@ -81,7 +83,7 @@ namespace Pruefungsaufgabe { //Erstelle Namespace
         console.log(warenZahlZaehler);
         anzahl.innerHTML = warenZahlZaehler.toString();
 
-        preis += this.price; //-
+        preis += this.price;
         console.log(preis + "€");
         priceZahl.innerHTML = preis.toString() + "€";
 
